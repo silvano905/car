@@ -19,4 +19,4 @@ class Products(models.Model):
         return self.session
 
     def get_absolute_url(self):
-        return reverse('help:services', kwargs={'user': self.user})
+        return reverse('help:services', kwargs={'session': self.session})

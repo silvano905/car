@@ -92,8 +92,9 @@ def add_auto(request):
     quantity = 0
     total = 0
     language = 'english'
+    if not request.session.session_key:
+        request.session.save()
     session = request.session.session_key
-    print(session)
 
     if_obj_exists = Products.objects.filter(session__exact=session).exists()
 
