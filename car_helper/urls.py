@@ -18,7 +18,10 @@ from django.urls import path, include, re_path, reverse_lazy
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth import views as auth_views
 
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('helper.urls')),
+
 ]

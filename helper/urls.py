@@ -7,5 +7,7 @@ urlpatterns = [
     path('', views.add_auto, name='services'),
     path('undo/', views.undo_all, name='undo'),
     path('add/',views.add_indi, name='add'),
-    path('thankyou/', views.request_services, name='thankyou')
+    path('thankyou/', views.request_services, name='thankyou'),
+    path('sitemap.xml', views.about, name='about'),
+
 ]

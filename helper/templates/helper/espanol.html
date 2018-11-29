@@ -186,7 +186,7 @@
                     <p class="price card-text">precio: $<span id="total">70</span></p>
                             <form action="{% url 'help:add'%}" method="post">
                                 {% csrf_token %}
-                                  <label for="sell">Haga clic para agregar llanta de repuesto si no tienes una <span><img src="http://drive.google.com/uc?export=view&id=1LyOg8E4Dwdx9CSMkSrU1VzVDIaqlsi14" alt="tire" style="width: 30px; height: auto"> </span><select id="sell" name="quantity">
+                                  <label for="sell">Haga clic para agregar llanta de repuesto si no tienes una <select id="sell" name="quantity">
                                     <option value="0" selected>aquí</option>
                                     <option value="1">1 llanta</option>
                                   </select></label>

@@ -7,7 +7,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import TemplateView, ListView
 from django.shortcuts import render
 import json
-from django.http import Http404
+from django.http import Http404, HttpResponse
 from django.urls import reverse_lazy
 from .forms import UserFormRegistration, ProductForm
 from .models import Products
@@ -160,4 +160,8 @@ def request_services(request):
     send_mail('SILBERE', 'Bienvenido!', settings.EMAIL_HOST_USER, [email_user], html_message=msg,
               fail_silently=False)
     return render(request, 'helper/thankyou.html', {'lan': language, 'total': grand_total})
+
+
+def about(request):
+    return HttpResponse(open('helper/static/sitemap.xml').read(), content_type='text/xml')
 

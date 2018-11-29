@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'helper.apps.HelperConfig',
     'bootstrap4',
+    'django.contrib.sitemaps',
 
 ]
 
