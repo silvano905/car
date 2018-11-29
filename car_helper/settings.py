@@ -22,12 +22,12 @@ STATIC_DIR = os.path.join(BASE_DIR, 'helper/static')
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'zkcx$jg*!eel3600-!s^d6agar@9h(=-cnwgs3=xcvr-!pfi)u'
+SECRET_KEY = os.environ['MY_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['silvano90help.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
