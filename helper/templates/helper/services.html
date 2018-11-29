@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load bootstrap4 %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1" name="viewport" >
+    <title>Auto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/my_style.css' %}"/>
+
+</head>
+<body class="main">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <a class="navbar-brand" href="{% url 'help:services'%}">CARHELPER
+    </a>
+</nav>
+
+
+{% block body_block %}
+<div class="top_margin container" align="center">
+
+
+
+
+
+
+
+{% for x in all %}
+    {% if x.language == 'english' %}
+            <h5 style="color: coral">The fastest roadside assistance available in Cicero, Chicago and Berwyn</h5>
+
+        <div class="card text-white bg-dark mb-3" style="max-width: 30rem;">
+  <div class="card-body">
+    <p class="card-text">Just click the <button type="button" class="btn btn-primary btn-sm">Request services</button> button at the bottom when you are done and within minutes you will receive a text from us to let you know when help will arrive</p>
+  </div>
+</div>
+            <h6>Select your language for better service</h6>
+    <h6>Por favor elija su idioma preferido para atenderlo mejor</h6>
+
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <form action="{% url 'help:add'%}" method="post">
+            {% csrf_token %}
+                {% if x.language == 'english' %}
+                    <button type="submit" name="language" value="english" class="btn btn-success">English</button>
+                {% else %}
+                    <button type="submit" name="language" value="english" class="btn btn-secondary">English</button>
+                {% endif %}
+            </form>
+            <form action="{% url 'help:add'%}" method="post">
+            {% csrf_token %}
+                {% if x.language == 'espanol' %}
+            <button type="submit" name="language" value="espanol" class="btn btn-success">Español</button>
+                {% else %}
+                <button type="submit" name="language" value="espanol" class="btn btn-secondary">Español</button>
+                {% endif %}
+            </form>
+        </div>
+
+        <div class="row">
+            {% if not x.keys %}
+            <div class="col-lg-6 col-6">
+                <div class="card_width card border border-primary">
+                    <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1hvnEzsaDx3r6ajQsnU3HpNLKFxxi9ejo" alt="keys">
+
+                  <div class="card-body">
+                    <h5 class="card-title">Forgot your car keys inside of your car?</h5>
+                    <p class="card-text">We can open your door without damaging anything.</p>
+                    <p class="price card-text">price: $49</p>
+                            <form action="{% url 'help:add'%}" method="post">
+                                {% csrf_token %}
+                                <input type='hidden' name="keys" value="keys">
+                                <button type="submit" class="btn btn-outline-success">Add Service</button>
+                            </form>
+                  </div>
+                </div>
+            </div>
+        {% else %}
+
+            <div class="col-lg-6 col-6">
+                <div class="card_width card border border-primary">
+                    <div class="card-img-caption">
+                        <div class="card-text"><h1 class="added">Added</h1></div>
+                        <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1hvnEzsaDx3r6ajQsnU3HpNLKFxxi9ejo" alt="keys">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Forgot your car keys inside of your car?</h5>
+                        <p class="card-text">We can open your door without damaging anything.</p>
+                        <p class="price card-text">price: $49</p>
+                        <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Remove All</button></a>
+                    </div>
+                </div>
+            </div>
+
+        {% endif %}
+
+        {% if not x.freeze %}
+            <div class="col-lg-6 col-6">
+                <div class="card_width card border border-primary">
+                    <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=13ZeJm6-2HmxX7naqydz9Wsy_FVp_wsWv" alt="frozen">
+
+                  <div class="card-body">
+                    <h5 class="card-title">Frozen door?</h5>
+                    <p class="card-text">We can unfreeze your car door in less than 5 minutes</p>
+                    <p class="price card-text">price: $49</p>
+                            <form action="{% url 'help:add'%}" method="post">
+                                {% csrf_token %}
+                                <input type='hidden' name="frozen" value="frozen">
+                                <button type="submit" class="btn btn-outline-success">Add Service</button>
+                            </form>
+                  </div>
+                </div>
+            </div>
+        {% else %}
+            <div class="col-lg-6 col-6">
+                <div class="card_width card border border-primary">
+                    <div class="card-img-caption">
+                        <div class="card-text"><h1 class="added">Added</h1></div>
+                    <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=13ZeJm6-2HmxX7naqydz9Wsy_FVp_wsWv" alt="frozen">
+                    </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title">Frozen door?</h5>
+                    <p class="card-text">We can unfreeze your car door in less than 5 minutes</p>
+                    <p class="price card-text">price: $49</p>
+                        <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Remove All</button></a>
+
+                  </div>
+                </div>
+            </div>
+        {% endif %}
+
+
+        {% if not x.battery %}
+            <div class="col-lg-6 col-6">
+                <div class="card_width card border border-primary">
+                    <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1tjeNkV-Fyy5Zm0-lbdIitDTiLB3muG4c" alt="battery">
+
+                  <div class="card-body">
+                    <h5 class="card-title">Dead battery?</h5>
+                    <p class="card-text">We can Jump start your battery.</p>
+                    <p class="price card-text">price: $49</p>
+                            <form action="{% url 'help:add'%}" method="post">
+                                {% csrf_token %}
+                                <input type='hidden' name="battery" value="battery">
+                                <button type="submit" class="btn btn-outline-success">Add Service</button>
+                            </form>
+                  </div>
+                </div>
+            </div>
+        {% else %}
+                        <div class="col-lg-6 col-6">
+                <div class="card_width card border border-primary">
+                    <div class="card-img-caption">
+                        <div class="card-text"><h1 class="added">Added</h1></div>
+                    <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1tjeNkV-Fyy5Zm0-lbdIitDTiLB3muG4c" alt="battery">
+                    </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title">Dead battery?</h5>
+                    <p class="card-text">We can Jump start your battery.</p>
+                    <p class="price card-text">price: $49</p>
+                        <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Remove All</button></a>
+
+                  </div>
+                </div>
+            </div>
+
+        {% endif %}
+
+        {% if not x.gas %}
+            <div class="col-lg-6 col-6">
+                <div class="card_width card border border-primary">
+                    <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1Nycz1Z6dBJqZP8kC9CR_xCsv_g6yi0b9" alt="fuel">
+
+                  <div class="card-body">
+                    <h5 class="card-title">Need fuel?</h5>
+                    <p class="card-text">We can deliver to you 2.2 gallons of fuel in an emergency</p>
+                    <p class="price card-text">price: $59</p>
+                            <form action="{% url 'help:add'%}" method="post">
+                                {% csrf_token %}
+                                <input type='hidden' name="fuel" value="fuel">
+                                <button type="submit" class="btn btn-outline-success">Add Service</button>
+                            </form>
+                  </div>
+                </div>
+            </div>
+        {% else %}
+
+                        <div class="col-lg-6 col-6">
+                <div class="card_width card border border-primary">
+                                        <div class="card-img-caption">
+                        <div class="card-text"><h1 class="added">Added</h1></div>
+                    <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1Nycz1Z6dBJqZP8kC9CR_xCsv_g6yi0b9" alt="fuel">
+                    </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title">Need fuel?</h5>
+                    <p class="card-text">We can deliver to you 2.2 gallons of fuel in an emergency</p>
+                    <p class="price card-text">price: $59</p>
+                         <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Remove All</button></a>
+
+                  </div>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if not x.tire %}
+            <div class="col-lg-6 col-12">
+                <div class="card_width_tire card border border-primary">
+                    <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1Ei_BiAqGkn_OT-zt3p64Q_Nv6hJhwqBV" alt="tire">
+
+                  <div class="card-body">
+                    <h5 class="card-title">Flat tire?</h5>
+                    <p class="card-text">Let us get you a quick tire change service and install your spare tire for you in minutes.
+                        Or request a spare tire if you don't hava on.</p>
+
+                    <p class="price card-text">price: $<span id="total">70</span></p>
+                            <form action="{% url 'help:add'%}" method="post">
+                                {% csrf_token %}
+                                  <label for="sell">Click to add spare tire <span>
+                                      <img src="http://drive.google.com/uc?export=view&id=1LyOg8E4Dwdx9CSMkSrU1VzVDIaqlsi14"
+                                           alt="tire" style="width: 30px; height: auto"> </span>
+                                      <select id="sell" name="quantity">
+                                        <option value="0" selected>here</option>
+                                        <option value="1">1 spare tire</option>
+                                  </select></label>
+                                <input type='hidden' name="tires" value="tires">
+                                <button type="submit" id="tires" class="btn btn-outline-success">Add Service</button>
+                            </form>
+                  </div>
+                </div>
+            </div>
+        {% else %}
+            <div class="col-lg-6 col-12">
+                <div class="card_width card border border-primary">
+                    <div class="card-img-caption">
+                        <div class="card-text"><h1 class="added">Added</h1></div>
+                    <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1Ei_BiAqGkn_OT-zt3p64Q_Nv6hJhwqBV" alt="tire">
+                    </div>
+
+                  <div class="card-body">
+                        <h5 class="card-title">Flat tire?</h5>
+                        <p class="card-text">Let us get you a quick tire change service and install your spare tire for you.</p>
+                        {% if x.quantity == 1 %}
+                            <p class="price">You added {{ x.quantity }} spare tier</p>
+                            <p class="price">$99</p>
+                        {% else %}
+                            <p class="price">price: $70</p>
+                        {% endif %}
+                        <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Remove All</button></a>
+
+                  </div>
+                </div>
+            </div>
+        {% endif %}
+
+        </div>
+
+                <div class="top_margin">
+            <div align="center"><h3 style="color: #cc1111">Please turn on your location to get your current location</h3></div>
+            <div id="map" class="bottom_margin top_margin"></div>
+        </div>
+
+
+
+    <div class="col-lg-12">
+        <p align="center">When you are ready adding your services press the button below</p>
+        {% for bere in all %}
+        <h3 style="color: mediumseagreen">Your Total: ${{ bere.total }}</h3>
+            <h5 style="color: #0005cc">We accept credit/debit card, cash or Venmo</h5>
+            <h5 style="color: #0005cc">You will be charged when your service has been completed</h5>
+            <form action="{% url 'help:thankyou'%}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="grand_total" value="{{ bere.total }}">
+                <input type='hidden' name="long" value="fuel" id="lat">
+                <p class="small" id="phone_output"></p>
+                <label for="phone">Phone Number: <input type="text" required name="phone" placeholder="enter phone number" id="phone"></label>
+                <button type="submit" class="bottom_margin btn btn-primary btn-lg btn-block" id="request">Request Services</button>
+
+            </form>
+        {% endfor %}
+
+        <h1 id="lat"></h1>
+        <h1 id="long"></h1>
+    </div>
+
+
+</div>
+{% else %}
+    {% include 'helper/espanol.html'%}
+    {% endif %}
+{% endfor %}
+
+
+{% endblock %}
+
+    <script>      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 16
+        });
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            let x = document.getElementById('lat').value = pos.lat+' '+ pos.lng;
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('YOU ARE HERE');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+    </script>
+
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGqdzG8r0hkRipQnCoLYVh1Kg9lmk5TzE&callback=initMap"
+    async defer></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+<script>
+$(document).ready(function(){
+    $('#sell').change(function() {
+        var value = $('#sell :selected').val();
+        $('#total').text(70+(29*value));
+  });
+});
+</script>
+
+<script>
+    function phone_check() {
+        let t = document.getElementById('phone').value;
+        let here = document.getElementById('phone_output');
+        if(t.length===10){
+            $("#phone_output").removeClass("red");
+            $("#phone_output").addClass("green");
+            here.textContent = 'OK';
+
+        }else {
+            $("#phone_output").removeClass("green");
+            $("#phone_output").addClass("red");
+            here.classList.add('red');
+            here.textContent = 'NO'
+        }
+    }
+
+    document.getElementById('phone').addEventListener('keyup', phone_check);
+</script>
+
+</body>
+
+</html>
