@@ -163,5 +163,5 @@ def request_services(request):
 
 
 def about(request):
-    return HttpResponse(open('helper/static/sitemap.xml').read(), content_type='text/xml')
+    return render(request, 'helper/sitemap.xml', content_type='text/xml')
 
