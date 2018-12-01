@@ -5,7 +5,7 @@
   </div>
 </div>
 
-            <h6>Select your language for better service</h6>
+    <h6>Select your language for better service</h6>
     <h6>Por favor elija su idioma preferido para atenderlo mejor</h6>
 
         <div class="btn-group" role="group" aria-label="Basic example">
@@ -227,6 +227,15 @@
         <div class="top_margin">
             <div align="center"><h3 style="color: #cc1111">Por favor enciende tu ubicación en tu celular</h3></div>
             <div id="map" class="bottom_margin top_margin"></div>
+
+                        <button class="btn btn-primary" id="incorrect_button">¿Tu dirección es incorrecta?</button>
+                <div style="visibility: hidden; display: none" id="incorrect_div">
+                    <p>Recargar y activar la ubicación <span><img src="http://drive.google.com/uc?export=view&id=1g1fHSex0x2pi3VJY3I6dz2iET-53qpji" alt="tire" style="width: 25px; height: 25px"></span></p>
+                    <div style="margin-top: -15px; margin-bottom: 10px">
+                        <a href="{% url 'help:services'%}"><button class="btn btn-primary btn-sm">Actualizar página</button></a>
+                    </div>
+                    <label>O ingrese la dirección manualmente<input type="text" id="manul_address"></label>
+                </div>
         </div>
 
 
@@ -241,6 +250,7 @@
             <h5 style="color: #0005cc">Se le cobrará cuando su servicio haya sido completado</h5>
             <form action="{% url 'help:thankyou'%}" method="post">
                 {% csrf_token %}
+                <input type="hidden" name="manual_address" value="" id="add_manual_address">
                 <input type="hidden" name="grand_total" value="{{ bere.total }}">
                 <input type='hidden' name="long" value="fuel" id="lat">
                 <p class="small" id="phone_output"></p>

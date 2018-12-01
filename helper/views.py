@@ -91,7 +91,7 @@ def add_auto(request):
     close_hour = silvano.hour
     we_are_closed = ''
     display_message = False
-    if close_hour >= 20 or close_hour <=4:
+    if close_hour >= 20 or close_hour <= 4:
         we_are_closed = 'Sorry we are closed'
         display_message = True
     else:
@@ -139,6 +139,7 @@ def add_auto(request):
 
 
 def request_services(request):
+    get_manual_address = request.POST.get('manual_address')
     phone_number = request.POST.get('phone')
     grand_total = request.POST.get('grand_total')
     long_lat = request.POST.get('long')
@@ -183,11 +184,11 @@ def request_services(request):
     msg3 = long_lat+' :Number of tiers '+str(quantity)
     grand_total = ' Total: {}'.format(str(grand_total))
     phone_number = ' Phone Number: {}'.format(str(phone_number))
-    msg = msg + '\nLocation: '+msg3 + grand_total + phone_number + ' Idioma: '+language
+    msg = msg + '\nLocation: '+msg3 + grand_total + phone_number + ' Idioma: '+language +'/manual address: '+get_manual_address
 
-    email_user = 'carhelper90@gmail.com'
+    email_user = 'silvanovaldez90@yahoo.com'
 
-    send_mail('SILBERE', 'Bienvenido!', settings.EMAIL_HOST_USER, [email_user], html_message=msg,
+    send_mail('chicagocarhelp', 'Bienvenido!', settings.EMAIL_HOST_USER, [email_user], html_message=msg,
               fail_silently=False)
     return render(request, 'helper/thankyou.html', {'lan': language, 'total': grand_total})
 
