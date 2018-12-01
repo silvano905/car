@@ -16,7 +16,7 @@ from django.template.loader import render_to_string
 from django.conf import settings
 from django.db.models import Count
 from django.db.models import F
-
+from datetime import datetime
 
 def undo_all(request):
     xxx = Products.objects.filter(session=request.session.session_key)
@@ -84,6 +84,21 @@ def add_indi(request):
 
 
 def add_auto(request):
+    berenise = False
+    vacations = 'open on Monday 5AM'
+
+    silvano = datetime.now()
+    close_hour = silvano.hour
+    we_are_closed = ''
+    display_message = False
+    if close_hour >= 20 or close_hour <=4:
+        we_are_closed = 'Sorry we are closed'
+        display_message = True
+    else:
+        we_are_closed = ''
+        display_message = False
+
+
     key = False
     gas = False
     battery = False
@@ -100,12 +115,27 @@ def add_auto(request):
 
     if if_obj_exists:
         all_services = Products.objects.filter(session=request.session.session_key)
-        return render(request, 'helper/services.html', {'all': all_services})
+        context = {
+            'display_message': display_message,
+            'we_are_closed': we_are_closed,
+            'all': all_services,
+            'vacations': vacations,
+            'berenise': berenise
+        }
+        return render(request, 'helper/services.html', context)
     else:
         xx = Products.objects.create(session=session, keys=key, gas=gas, battery=battery, freeze=freeze, tire=tire, quantity=quantity, total=total, language=language)
         xx.save()
         all_services = Products.objects.filter(session=request.session.session_key)
-        return render(request, 'helper/services.html', {'all': all_services})
+
+        context = {
+            'display_message': display_message,
+            'we_are_closed': we_are_closed,
+            'all': all_services,
+            'vacations': vacations,
+            'berenise': berenise
+        }
+        return render(request, 'helper/services.html', context)
 
 
 def request_services(request):
@@ -164,4 +194,20 @@ def request_services(request):
 
 def about(request):
     return render(request, 'helper/sitemap.xml', content_type='text/xml')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -22,17 +22,33 @@
 <body class="main">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-    <a class="navbar-brand" href="{% url 'help:services'%}">CHICAGOCARHELP.COM
+    <a class="navbar-brand" href="{% url 'help:services'%}">WWW.CHICAGOCARHELP.COM
     </a>
 </nav>
 
 
 {% block body_block %}
+
 <div class="top_margin container" align="center">
 
 
 
+    {% if berenise %}
+    <div align="center">
+        <div class="business">
+            <h1  class="business_white">Sorry we are closed</h1>
+            <h3>{{ vacations }}</h3>
+        </div>
+    </div>
+        {% elif display_message %}
+            <div align="center">
+            <div  class="business">
+                <h1 class="business_white">{{ we_are_closed }}</h1>
+                <h3>Open tomorrow at 5AM</h3>
+            </div>
+            </div>
 
+    {% endif %}
 
 
 
@@ -40,8 +56,8 @@
     {% if x.language == 'english' %}
             <h5 style="color: coral">The fastest roadside assistance available in Cicero, Chicago and Berwyn</h5>
 
-        <div class="card text-white bg-dark mb-3" style="max-width: 30rem;">
-  <div class="card-body">
+        <div class="card text-white bg-dark mb-3 purple_shadow">
+  <div class="card-body" style="">
     <p class="card-text">Just click the <button type="button" class="btn btn-primary btn-sm">Request services</button> button at the bottom when you are done and within minutes you will receive a text from us to let you know when help will arrive</p>
   </div>
 </div>
@@ -70,7 +86,7 @@
         <div class="row">
             {% if not x.keys %}
             <div class="col-lg-6 col-12">
-                <div class="card_width card border border-primary">
+                <div class="card_width card purple_shadow">
                     <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1hvnEzsaDx3r6ajQsnU3HpNLKFxxi9ejo" alt="keys">
 
                   <div class="card-body">
@@ -89,7 +105,7 @@
         {% else %}
 
             <div class="col-lg-6 col-12">
-                <div class="card_width card border border-primary">
+                <div class="card_width card purple_shadow">
                     <div class="card-img-caption">
                         <div class="card-text"><h1 class="added">Added</h1></div>
                         <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1hvnEzsaDx3r6ajQsnU3HpNLKFxxi9ejo" alt="keys">
@@ -107,7 +123,7 @@
 
         {% if not x.freeze %}
             <div class="col-lg-6 col-12">
-                <div class="card_width card border border-primary">
+                <div class="card_width card purple_shadow">
                     <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=13ZeJm6-2HmxX7naqydz9Wsy_FVp_wsWv" alt="frozen">
 
                   <div class="card-body">
@@ -125,7 +141,7 @@
             </div>
         {% else %}
             <div class="col-lg-6 col-12">
-                <div class="card_width card border border-primary">
+                <div class="card_width card purple_shadow">
                     <div class="card-img-caption">
                         <div class="card-text"><h1 class="added">Added</h1></div>
                     <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=13ZeJm6-2HmxX7naqydz9Wsy_FVp_wsWv" alt="frozen">
@@ -145,7 +161,7 @@
 
         {% if not x.battery %}
             <div class="col-lg-6 col-12">
-                <div class="card_width card border border-primary">
+                <div class="card_width card purple_shadow">
                     <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1tjeNkV-Fyy5Zm0-lbdIitDTiLB3muG4c" alt="battery">
 
                   <div class="card-body">
@@ -163,7 +179,7 @@
             </div>
         {% else %}
                         <div class="col-lg-6 col-12">
-                <div class="card_width card border border-primary">
+                <div class="card_width card purple_shadow">
                     <div class="card-img-caption">
                         <div class="card-text"><h1 class="added">Added</h1></div>
                     <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1tjeNkV-Fyy5Zm0-lbdIitDTiLB3muG4c" alt="battery">
@@ -183,7 +199,7 @@
 
         {% if not x.gas %}
             <div class="col-lg-6 col-12">
-                <div class="card_width card border border-primary">
+                <div class="card_width card purple_shadow">
                     <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1Nycz1Z6dBJqZP8kC9CR_xCsv_g6yi0b9" alt="fuel">
 
                   <div class="card-body">
@@ -201,7 +217,7 @@
         {% else %}
 
                         <div class="col-lg-6 col-12">
-                <div class="card_width card border border-primary">
+                <div class="card_width card purple_shadow">
                                         <div class="card-img-caption">
                         <div class="card-text"><h1 class="added">Added</h1></div>
                     <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1Nycz1Z6dBJqZP8kC9CR_xCsv_g6yi0b9" alt="fuel">
@@ -220,7 +236,7 @@
 
         {% if not x.tire %}
             <div class="col-lg-6 col-12">
-                <div class="card_width_tire card border border-primary">
+                <div class="card_width_tire card purple_shadow">
                     <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1Ei_BiAqGkn_OT-zt3p64Q_Nv6hJhwqBV" alt="tire">
 
                   <div class="card-body">
@@ -245,7 +261,7 @@
             </div>
         {% else %}
             <div class="col-lg-6 col-12">
-                <div class="card_width card border border-primary">
+                <div class="card_width card purple_shadow">
                     <div class="card-img-caption">
                         <div class="card-text"><h1 class="added">Added</h1></div>
                     <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1Ei_BiAqGkn_OT-zt3p64Q_Nv6hJhwqBV" alt="tire">
@@ -270,7 +286,7 @@
         </div>
 
                 <div class="top_margin">
-            <div align="center"><h3 style="color: #cc1111">Please turn on your location to get your current location</h3></div>
+            <div align="center"><h3 style="color: #cc1111">Please turn on your location to automatically get your address</h3></div>
             <div id="map" class="bottom_margin top_margin"></div>
         </div>
 
@@ -303,6 +319,8 @@
     {% include 'helper/espanol.html'%}
     {% endif %}
 {% endfor %}
+
+
 
 
 {% endblock %}
@@ -354,9 +372,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-
 <script>
 $(document).ready(function(){
+
+
     $('#sell').change(function() {
         var value = $('#sell :selected').val();
         $('#total').text(70+(29*value));

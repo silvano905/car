@@ -46,6 +46,27 @@ img{
     height: 150px;
     padding-top: 35px
 }
+
+
+.business{
+    width: 300px;
+    height: 100px;
+    background-color: #cc1111;
+    border-radius: 5px;
+    box-shadow: 5px 6px 8px 0 rgba(252,0,29, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 70px;
+}
+.business_white{
+    color: white;
+}
+
+
+.purple_shadow{
+    max-width: 30rem;
+    box-shadow: 5px 6px 8px 0 rgba(165,11,252,0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
 @media screen and (max-width: 600px){
     .card_width{
         width: 16rem;
