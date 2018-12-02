@@ -74,24 +74,21 @@
     {% endif %}
 
 
-            <h6>Select your language for better service</h6>
-    <h6>Por favor elija su idioma preferido para atenderlo mejor</h6>
-
         <div class="btn-group" role="group" aria-label="Basic example">
             <form action="{% url 'help:add'%}" method="post">
             {% csrf_token %}
                 {% if x.language == 'english' %}
-                    <button type="submit" name="language" value="english" class="btn btn-success">English</button>
+                    <button type="submit" name="language" value="english" class="btn btn-success btn-sm">English</button>
                 {% else %}
-                    <button type="submit" name="language" value="english" class="btn btn-secondary">English</button>
+                    <button type="submit" name="language" value="english" class="btn btn-secondary btn-sm">English</button>
                 {% endif %}
             </form>
             <form action="{% url 'help:add'%}" method="post">
             {% csrf_token %}
                 {% if x.language == 'espanol' %}
-            <button type="submit" name="language" value="espanol" class="btn btn-success">Español</button>
+            <button type="submit" name="language" value="espanol" class="btn btn-success btn-sm">Español</button>
                 {% else %}
-                <button type="submit" name="language" value="espanol" class="btn btn-secondary">Español</button>
+                <button type="submit" name="language" value="espanol" class="btn btn-secondary btn-sm">Español</button>
                 {% endif %}
             </form>
         </div>
@@ -105,7 +102,7 @@
 
                   <div class="card-body">
                     <h5 class="card-title">Forgot your car keys inside of your car?</h5>
-                    <p class="card-text">We can open your door without damaging anything.</p>
+                    <p class="card-text">We have the right tools to open your car in minutes and safely.</p>
                     <p class="price card-text">price: $49</p>
                             <form action="{% url 'help:add'%}" method="post">
                                 {% csrf_token %}
@@ -129,7 +126,7 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Forgot your car keys inside of your car?</h5>
-                        <p class="card-text">We can open your door without damaging anything.</p>
+                        <p class="card-text">We have the right tools to open your car in minutes and safely.</p>
                         <p class="price card-text">price: $49</p>
                         <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Remove All</button></a>
                     </div>
@@ -146,7 +143,7 @@
 
                   <div class="card-body">
                     <h5 class="card-title">Frozen door?</h5>
-                    <p class="card-text">We can unfreeze your car door in less than 5 minutes</p>
+                    <p class="card-text">We can unfreeze your car door in less than 3 minutes</p>
                     <p class="price card-text">price: $49</p>
                             <form action="{% url 'help:add'%}" method="post">
                                 {% csrf_token %}
@@ -168,7 +165,7 @@
 
                   <div class="card-body">
                     <h5 class="card-title">Frozen door?</h5>
-                    <p class="card-text">We can unfreeze your car door in less than 5 minutes</p>
+                    <p class="card-text">We can unfreeze your car door in less than 3 minutes</p>
                     <p class="price card-text">price: $49</p>
                         <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Remove All</button></a>
 
@@ -187,7 +184,7 @@
 
                   <div class="card-body">
                     <h5 class="card-title">Dead battery?</h5>
-                    <p class="card-text">We can Jump start your battery.</p>
+                    <p class="card-text">Car won't start? We can Jump start your battery.</p>
                     <p class="price card-text">price: $49</p>
                             <form action="{% url 'help:add'%}" method="post">
                                 {% csrf_token %}
@@ -229,7 +226,7 @@
 
                   <div class="card-body">
                     <h5 class="card-title">Need fuel?</h5>
-                    <p class="card-text">We can deliver to you 2.2 gallons of fuel in an emergency</p>
+                    <p class="card-text">We can deliver to you 2 gallons of fuel in an emergency</p>
                     <p class="price card-text">price: $59</p>
                             <form action="{% url 'help:add'%}" method="post">
                                 {% csrf_token %}
@@ -251,7 +248,7 @@
 
                   <div class="card-body">
                     <h5 class="card-title">Need fuel?</h5>
-                    <p class="card-text">We can deliver to you 2.2 gallons of fuel in an emergency</p>
+                    <p class="card-text">We can deliver to you 2 gallons of fuel in an emergency</p>
                     <p class="price card-text">price: $59</p>
                          <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Remove All</button></a>
 
@@ -269,7 +266,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Flat tire?</h5>
                     <p class="card-text">Let us get you a quick tire change service and install your spare tire for
-                        you in minutes. Or request a spare tire if you don't hava on.</p>
+                        you in minutes. Or request a spare tire if you don't have one.</p>
 
                     <p class="price card-text">price: $<span id="total">70</span></p>
                             <form action="{% url 'help:add'%}" method="post">
@@ -330,7 +327,12 @@
                     <div style="margin-top: -15px; margin-bottom: 10px">
                         <a href="{% url 'help:services'%}"><button class="btn btn-primary btn-sm">Reload</button></a>
                     </div>
-                    <label>Or enter address manually<input type="text" id="manul_address"></label>
+                    <label>Or enter address manually<input type="text"
+                                                           id="manul_address"
+                                                           placeholder="Enter address"
+                                                           style="padding: 3px;
+                                                           border: 1px solid rebeccapurple;
+                                                           border-radius: 5px"></label>
                 </div>
         </div>
 
@@ -348,11 +350,12 @@
                 <input type="hidden" name="grand_total" value="{{ bere.total }}">
                 <input type='hidden' name="long" value="fuel" id="lat">
                 <p class="small" id="phone_output"></p>
-                <label for="phone">Phone Number: <input type="text"
-                                                        required
-                                                        name="phone"
-                                                        placeholder="enter phone number"
-                                                        id="phone"></label>
+                <label for="phone">
+                    <img class="card-img-top"
+                         src="http://drive.google.com/uc?export=view&id=1-KalT8-Eolxhbs19mUmjqQL9wF4eLpO5"
+                         alt="tire" style="width: 20px; height: 20px; margin-top: -10px">
+                    <input type="text" required name="phone" placeholder="enter phone number" id="phone"
+                           style="padding: 3px; border: 1px solid rebeccapurple; border-radius: 5px"></label>
                 <button type="submit" class="bottom_margin btn btn-primary btn-lg btn-block"
                         id="request">Request Services</button>
 
