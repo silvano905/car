@@ -25,7 +25,7 @@ STATIC_DIR = os.path.join(BASE_DIR, 'helper/static')
 SECRET_KEY = os.environ['MY_KEY_CAR']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['silvano90help.pythonanywhere.com', '127.0.0.1', 'chicagocarhelp.com','www.chicagocarhelp.com', 'https://silvano90help.pythonanywhere.com']
 
@@ -61,7 +61,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [TEMPLATE_DIR,]
         ,
-        'APP_DIRS': False,
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
