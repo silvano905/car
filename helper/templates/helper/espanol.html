@@ -1,9 +1,28 @@
-    <h5 style="color: coral">La asistencia en carretera más rápida disponible en Cicero, Chicago y Berwyn</h5>
         <div class="card text-white bg-dark mb-3 purple_shadow">
   <div class="card-body">
-    <p class="card-text">Simplemente haga clic en el servicio que requiere y en unos minutos recibirá un mensaje nuestro para informarle cuándo llegará la ayuda. No tiene que ingresar la dirección.</p>
+    <p class="card-text">Obtenga la asistencia en carretera más rápida en Chicago, Cicero y Berwyn. No es
+        necesario llamar. Solicite combustible de emergencia, cambie la llanta desinflada, desbloquee
+        la puerta del automóvil, descongele la puerta del automóvil y arranque de la batería.</p>
   </div>
 </div>
+
+
+            {% if berenise %}
+    <div align="center">
+        <div class="business">
+            <h1  class="business_white">Lo siento, ya está cerrado</h1>
+            <h3>{{ vacations }}</h3>
+        </div>
+    </div>
+        {% elif display_message %}
+            <div align="center">
+            <div  class="business">
+                <h1 class="business_white">Lo siento, ya está cerrado</h1>
+                <h3>Abierto mañana a las 5AM</h3>
+            </div>
+            </div>
+
+    {% endif %}
 
     <h6>Select your language for better service</h6>
     <h6>Por favor elija su idioma preferido para atenderlo mejor</h6>
