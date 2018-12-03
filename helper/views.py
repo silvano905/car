@@ -29,7 +29,7 @@ def undo_all(request):
         i.quantity = 0
         i.total = 0
         i.save()
-    return redirect('help:services')
+    return redirect('help:home')
 
 
 def add_indi(request):
@@ -80,7 +80,7 @@ def add_indi(request):
             for i in all_services:
                 i.language = get_language
                 i.save()
-        return redirect('help:services')
+        return redirect('help:home')
 
 
 def add_auto(request):
@@ -122,7 +122,7 @@ def add_auto(request):
             'vacations': vacations,
             'berenise': berenise
         }
-        return render(request, 'helper/services.html', context)
+        return render(request, 'helper/home.html', context)
     else:
         xx = Products.objects.create(session=session, keys=key, gas=gas, battery=battery, freeze=freeze, tire=tire, quantity=quantity, total=total, language=language)
         xx.save()
@@ -135,7 +135,7 @@ def add_auto(request):
             'vacations': vacations,
             'berenise': berenise
         }
-        return render(request, 'helper/services.html', context)
+        return render(request, 'helper/home.html', context)
 
 
 def request_services(request):
@@ -193,8 +193,38 @@ def request_services(request):
     return render(request, 'helper/thankyou.html', {'lan': language, 'total': grand_total})
 
 
-def about(request):
+def site_map(request):
     return render(request, 'helper/sitemap.xml', content_type='text/xml')
+
+
+def about(request):
+    return render(request, 'helper/about.html')
+
+
+def services(request):
+    return render(request, 'helper/services.html')
+
+
+def unfreeze(request):
+    return render(request, 'helper/unfreeze_car.html')
+
+
+def car_unlock(request):
+    return render(request, 'helper/car_unlock.html')
+
+
+def flat_tire(request):
+    return render(request, 'helper/flat_tire_change.html')
+
+
+def fuel_delivery(request):
+    return render(request, 'helper/out_of_gas.html')
+
+
+def battery_jump_start(request):
+    return render(request, 'helper/car_jump_start.html')
+
+
 
 
 

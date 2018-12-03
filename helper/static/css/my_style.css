@@ -4,11 +4,21 @@ img{
     object-fit: contain;
 }
 
+.make_big{
+    font-size: 30px;
+
+}
+
+
 .bottom_margin{
     margin-bottom: 30px;
 }
 .top_margin{
     margin-top: 20px;
+}
+
+.top_margin2{
+    margin-top: 50px;
 }
 
 .card_width{
@@ -60,11 +70,22 @@ img{
     color: white;
 }
 
-
 .purple_shadow{
     max-width: 30rem;
     box-shadow: 5px 6px 8px 0 rgba(165,11,252,0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+
+
+.purple_shadow_two{
+    max-width: 50rem;
+    box-shadow: 5px 6px 8px 0 rgba(165,11,252,0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.purple_shadow_two p{
+    padding: 10px;
+    text-align: start;
+}
+
 
 
 @media screen and (max-width: 600px){
@@ -79,7 +100,13 @@ img{
         height: 38rem;
         width: 20rem;
     }
+    .make_big{
+    font-size: 20px;
 
+    }
+    .put_left{
+        text-align: start;
+    }
 
 }
 .red{
