@@ -101,13 +101,6 @@
                     <h3>{{ vacations }}</h3>
                 </div>
             </div>
-        {% elif display_message %}
-            <div align="center">
-                <div  class="business">
-                    <h1 class="business_white">{{ we_are_closed }}</h1>
-                    <h3>Open tomorrow at 5AM</h3>
-                </div>
-            </div>
         {% endif %}
 
 
@@ -369,7 +362,7 @@
                     <img src="http://drive.google.com/uc?export=view&id=1g1fHSex0x2pi3VJY3I6dz2iET-53qpji"
                          alt="location" style="width: 25px; height: 25px"></span></p>
                 <div style="margin-top: -15px; margin-bottom: 10px">
-                    <a href="{% url 'help:services'%}"><button class="btn btn-primary btn-sm">Reload</button></a>
+                    <a href="{% url 'help:home'%}"><button class="btn btn-primary btn-sm">Reload</button></a>
                 </div>
                 <label>Or enter address manually<input type="text"
                                                        id="manul_address"

@@ -87,18 +87,6 @@ def add_auto(request):
     berenise = False
     vacations = 'open on Monday 5AM'
 
-    silvano = datetime.now()
-    close_hour = silvano.hour
-    we_are_closed = ''
-    display_message = False
-    if close_hour >= 20 or close_hour <= 4:
-        we_are_closed = 'Sorry we are closed'
-        display_message = True
-    else:
-        we_are_closed = ''
-        display_message = False
-
-
     key = False
     gas = False
     battery = False
@@ -116,8 +104,6 @@ def add_auto(request):
     if if_obj_exists:
         all_services = Products.objects.filter(session=request.session.session_key)
         context = {
-            'display_message': display_message,
-            'we_are_closed': we_are_closed,
             'all': all_services,
             'vacations': vacations,
             'berenise': berenise
@@ -129,8 +115,6 @@ def add_auto(request):
         all_services = Products.objects.filter(session=request.session.session_key)
 
         context = {
-            'display_message': display_message,
-            'we_are_closed': we_are_closed,
             'all': all_services,
             'vacations': vacations,
             'berenise': berenise
