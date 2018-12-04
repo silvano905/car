@@ -96,6 +96,9 @@ img{
     .main{
         font-size: 19px;
     }
+    .small_font{
+        font-size: 17px;
+    }
     .card_width_tire{
         height: 38rem;
         width: 20rem;
