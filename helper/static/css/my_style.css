@@ -8,6 +8,9 @@ img{
     font-size: 30px;
 
 }
+.make_big_two{
+    font-size: 30px;
+}
 
 
 .bottom_margin{
@@ -107,9 +110,13 @@ img{
     font-size: 20px;
 
     }
+    .make_big_two{
+        font-size: 15px;
+    }
     .put_left{
         text-align: start;
     }
+
 
 }
 .red{
