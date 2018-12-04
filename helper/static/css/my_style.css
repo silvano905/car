@@ -60,6 +60,11 @@ img{
     padding-top: 35px
 }
 
+.pic_background{
+    color: white;
+    background: rgba(0, 0, 0, 0.74);
+    padding-top: 1px
+}
 
 .business{
     width: 300px;
@@ -111,7 +116,7 @@ img{
 
     }
     .make_big_two{
-        font-size: 15px;
+        font-size: 16px;
     }
     .put_left{
         text-align: start;
