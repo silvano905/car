@@ -14,10 +14,10 @@
 </script>
 
     <meta charset="UTF-8" content="width=device-width, initial-scale=1" name="viewport" >
-    <title>Fuel delivery, car jump start, car unlock | chicago roadside assistance</title>
+    <title>Fuel delivery, jump start car, car unlock service | chicago roadside assistance</title>
     <meta name="description" content="Get the fastest roadside assistance in Chicago, Cicero and Berwyn. No call needed.
-     Request fuel delivery, unlock car door, unfreeze car door and car jump start.">
-    
+     Request fuel delivery, car unlock service, unfreeze car door and jump start car.">
+
     <meta name="keywords" content="Roadside assistance, Fuel delivery, Unlock car">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -45,8 +45,8 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{% url 'help:fuel_delivery'%}">Fuel delivery</a>
-                                <a class="dropdown-item" href="{% url 'help:jump_start'%}">Car jump start</a>
-                                <a class="dropdown-item" href="{% url 'help:unlock_car'%}">Unlock car door</a>
+                                <a class="dropdown-item" href="{% url 'help:jump_start'%}">Jump start car</a>
+                                <a class="dropdown-item" href="{% url 'help:unlock_car'%}">Car lockout service</a>
                                 <a class="dropdown-item" href="{% url 'help:unfreeze'%}">Unfreeze car door</a>
 
                     </div>
@@ -86,7 +86,7 @@
         <div class="card text-white bg-dark mb-3 purple_shadow">
             <div class="card-body" style="">
                 <p class="card-text">Get the fastest roadside assistance in Chicago, Cicero and Berwyn. No call needed.
-                Request fuel delivery, unlock car door, unfreeze car door and car jump start.</p>
+                Request fuel delivery, car unlock service, unfreeze car door and jump start car.</p>
             </div>
         </div>
 
@@ -289,60 +289,7 @@
                 </div>
             {% endif %}
 
-            {% if not x.tire %}
-                <div class="col-lg-6 col-12">
-                    <div class="card_width_tire card purple_shadow">
-                        <img class="card-img-top"
-                             src="http://drive.google.com/uc?export=view&id=1Ei_BiAqGkn_OT-zt3p64Q_Nv6hJhwqBV" alt="flat tire change">
 
-                        <div class="card-body">
-                            <h5 class="card-title">Flat tire?</h5>
-                            <p class="card-text">Let us get you a quick tire change service and install your spare tire for
-                                you in minutes. Or request a spare tire if you don't have one.</p>
-
-                            <p class="price card-text">price: $<span id="total">70</span></p>
-                                <form action="{% url 'help:add'%}" method="post">
-                                    {% csrf_token %}
-                                      <label for="sell">Click to add spare tire
-                                          <select id="sell" name="quantity">
-                                            <option value="0" selected>here</option>
-                                            <option value="1">1 spare tire</option>
-                                      </select></label>
-                                    <input type='hidden' name="tires" value="tires">
-                                    <button type="submit" id="tires" class="btn btn-outline-success">Add Service</button>
-                                </form>
-                            <a href="https://www.bridgestonetire.com/tread-and-trend/drivers-ed/how-to-change-a-flat-tire"
-                                 style="margin-top: 5px">How to change a flat tire</a>
-                        </div>
-                    </div>
-                </div>
-            {% else %}
-                <div class="col-lg-6 col-12">
-                    <div class="card_width card purple_shadow">
-                        <div class="card-img-caption">
-                            <div class="card-text">
-                                <h1 class="added">Added</h1>
-                            </div>
-                            <img class="card-img-top"
-                             src="http://drive.google.com/uc?export=view&id=1Ei_BiAqGkn_OT-zt3p64Q_Nv6hJhwqBV" alt="flat tire change">
-                        </div>
-
-                        <div class="card-body">
-                            <h5 class="card-title">Flat tire?</h5>
-                            <p class="card-text">Let us get you a quick tire change service and install your spare tire
-                                for you.</p>
-                            {% if x.quantity == 1 %}
-                                <p class="price">You added {{ x.quantity }} spare tier</p>
-                                <p class="price">$99</p>
-                            {% else %}
-                                <p class="price">price: $70</p>
-                            {% endif %}
-                            <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Remove All</button></a>
-
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
         </div>
 
 

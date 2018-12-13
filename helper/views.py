@@ -197,10 +197,6 @@ def car_unlock(request):
     return render(request, 'helper/car_unlock.html')
 
 
-def flat_tire(request):
-    return render(request, 'helper/flat_tire_change.html')
-
-
 def fuel_delivery(request):
     return render(request, 'helper/out_of_gas.html')
 
