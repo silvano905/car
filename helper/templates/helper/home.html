@@ -14,20 +14,11 @@
 </script>
 
     <meta charset="UTF-8" content="width=device-width, initial-scale=1" name="viewport" >
-    <title>emergency fuel delivery, flat tire change, car jump start, car unlock | chicago roadside assistance</title>
+    <title>Fuel delivery, car jump start, car unlock | chicago roadside assistance</title>
     <meta name="description" content="Get the fastest roadside assistance in Chicago, Cicero and Berwyn. No call needed.
-     Request emergency fuel delivery, flat tire change, unlock car door, unfreeze car door and car jump start. Car lockout">
-
-
-    <meta name="keywords" content="Roadside assistance near me, Emergency fuel delivery near me,Fuel delivery near me,
-    Fuel delivery service,Fuel delivery at home,Fuel delivery chicago,fuel delivery service chicago, Gasoline delivery near me,Flat tire service near
-    me,Emergency flat tire change near me,Flat tire chicago,Flat tire cicero,Flat tire berwyn,Flat tire service chicago, I got a flat tire,I have
-    a flat tire,Car won’t start,Jump start service,Need a jump start,Need a jump start near me,Jump start battery,
-    Jump start car chicago,Jump start chicago,Jump start near me,Jump start service chicago,Open my car,Open my car
-    near me,Open my locked car,Locksmith open my car,Need someone to open my car,Unlock my car,Unfreeze car door,car lockout,
-    car lockout service chicago, Chicago car lockout, Emergency fuel delivery chicago, Car jump service chicago, Chicago jump start,
-    Chicago flat tire, Chicago unfreeze car door, Car lockout chicago, Flat tire change chicago, Car jump start chicago,
-    Unlock car door chicago, Chicago fuel delivery">
+     Request fuel delivery, unlock car door, unfreeze car door and car jump start.">
+    
+    <meta name="keywords" content="Roadside assistance, Fuel delivery, Unlock car">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -53,7 +44,6 @@
                     Services
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{% url 'help:flat_tire'%}">Flat tire change</a>
                                 <a class="dropdown-item" href="{% url 'help:fuel_delivery'%}">Fuel delivery</a>
                                 <a class="dropdown-item" href="{% url 'help:jump_start'%}">Car jump start</a>
                                 <a class="dropdown-item" href="{% url 'help:unlock_car'%}">Unlock car door</a>
@@ -96,7 +86,7 @@
         <div class="card text-white bg-dark mb-3 purple_shadow">
             <div class="card-body" style="">
                 <p class="card-text">Get the fastest roadside assistance in Chicago, Cicero and Berwyn. No call needed.
-                Request emergency fuel delivery, flat tire change, unlock car door, unfreeze car door and car jump start.</p>
+                Request fuel delivery, unlock car door, unfreeze car door and car jump start.</p>
             </div>
         </div>
 
@@ -138,7 +128,7 @@
 
                         <div class="card-body">
                             <h5 class="card-title">Forgot your car keys inside of your car?</h5>
-                            <p class="card-text">We have the right tools to open your car in minutes and safely.</p>
+                            <p class="card-text">We have the right tools to unlock your car in minutes and safely.</p>
                             <p class="price card-text">price: $49</p>
                                 <form action="{% url 'help:add'%}" method="post">
                                     {% csrf_token %}
@@ -164,7 +154,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Forgot your car keys inside of your car?</h5>
-                            <p class="card-text">We have the right tools to open your car in minutes and safely.</p>
+                            <p class="card-text">We have the right tools to unlock your car in minutes and safely.</p>
                             <p class="price card-text">price: $49</p>
                             <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Remove All</button></a>
                         </div>
@@ -222,7 +212,7 @@
                              alt="car jump start">
 
                         <div class="card-body">
-                            <h5 class="card-title">Dead battery?</h5>
+                            <h5 class="card-title">Need a jump start?</h5>
                             <p class="card-text">Car won't start? We can Jump start your battery.</p>
                             <p class="price card-text">price: $49</p>
                                 <form action="{% url 'help:add'%}" method="post">
@@ -248,7 +238,7 @@
                         </div>
 
                         <div class="card-body">
-                            <h5 class="card-title">Dead battery?</h5>
+                            <h5 class="card-title">Need a jump start?</h5>
                             <p class="card-text">We can Jump start your battery.</p>
                             <p class="price card-text">price: $49</p>
                             <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Remove All</button></a>
@@ -267,7 +257,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Need fuel?</h5>
                             <p class="card-text">We can deliver to you 2 gallons of fuel in an emergency</p>
-                            <p class="price card-text">price: $59</p>
+                            <p class="price card-text">price: $49</p>
                             <form action="{% url 'help:add'%}" method="post">
                                 {% csrf_token %}
                                 <input type='hidden' name="fuel" value="fuel">
@@ -291,7 +281,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Need fuel?</h5>
                             <p class="card-text">We can deliver to you 2 gallons of fuel in an emergency</p>
-                            <p class="price card-text">price: $59</p>
+                            <p class="price card-text">price: $49</p>
                             <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Remove All</button></a>
 
                         </div>
@@ -419,10 +409,9 @@
     <div align="center" class="top_margin">
         <div class="purple_shadow">
             <h6>Services</h6>
-            <p>Car Lockout</p>
-            <p>Gas Delivery</p>
-            <p>Jump Start</p>
-            <p>Tire Change</p>
+            <p>Unlock Car</p>
+            <p>Fuel Delivery</p>
+            <p>Jump Start Car</p>
             <p>Unfreeze Frozen door</p>
 
         </div>

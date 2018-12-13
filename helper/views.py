@@ -63,7 +63,7 @@ def add_indi(request):
         elif fuel:
             for i in all_services:
                 i.gas = True
-                i.total = F('total') + 59
+                i.total = F('total') + 49
                 i.save()
 
         elif battery:
