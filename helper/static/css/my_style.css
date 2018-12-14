@@ -80,14 +80,14 @@ img{
 
 .purple_shadow{
     max-width: 30rem;
-    box-shadow: 5px 6px 8px 0 rgb(87, 23, 70), 0 6px 20px 0 rgba(252, 29, 230, 0.36);
+    box-shadow: 5px 6px 8px 0 rgb(41, 171, 226), 0 6px 20px 0 rgba(41, 171, 226, 0.36);
 }
 
 
 
 .purple_shadow_two{
     max-width: 50rem;
-    box-shadow: 5px 6px 8px 0 rgb(87, 23, 70), 0 6px 20px 0 rgba(252, 29, 230, 0.36);
+    box-shadow: 5px 6px 8px 0 rgb(41, 171, 226), 0 6px 20px 0 rgba(41, 171, 226, 0.36);
 }
 .purple_shadow_two p{
     padding: 10px;
