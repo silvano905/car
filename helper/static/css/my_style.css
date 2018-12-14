@@ -80,14 +80,14 @@ img{
 
 .purple_shadow{
     max-width: 30rem;
-    box-shadow: 5px 6px 8px 0 rgba(165,11,252,0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 5px 6px 8px 0 rgb(87, 23, 70), 0 6px 20px 0 rgba(252, 29, 230, 0.36);
 }
 
 
 
 .purple_shadow_two{
     max-width: 50rem;
-    box-shadow: 5px 6px 8px 0 rgba(165,11,252,0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 5px 6px 8px 0 rgb(87, 23, 70), 0 6px 20px 0 rgba(252, 29, 230, 0.36);
 }
 .purple_shadow_two p{
     padding: 10px;
@@ -132,7 +132,7 @@ img{
 }
 
 .price{
-    color: #98309b;
+    color: #571746;
     font-size: 21px;
 }
 

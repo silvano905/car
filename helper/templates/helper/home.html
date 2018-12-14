@@ -99,7 +99,6 @@
             </div>
         {% endif %}
 
-
         <div class="btn-group" role="group" aria-label="Basic example">
             <form action="{% url 'help:add'%}" method="post">
                 {% csrf_token %}
@@ -119,6 +118,14 @@
             </form>
         </div>
 
+                <img src="http://drive.google.com/uc?export=view&id=1hIonAC1d3q00UOVDNqVN4P6odWiNPTKe" alt="time" style="width: 150px; display: block; margin-top: 10px">
+        <div style="border: 2px solid white; margin-top: 5px; padding: 5px; width: 350px;
+        background-color: #571746; border-radius: 7px">
+            <h5 style="color: white">FAST</h5>
+        <h5 style="color: white">Will get to you in 20 minutes or less</h5>
+        </div>
+
+
         <div class="row">
             {% if not x.keys %}
                 <div class="col-lg-6 col-12">
@@ -133,7 +140,7 @@
                                 <form action="{% url 'help:add'%}" method="post">
                                     {% csrf_token %}
                                     <input type='hidden' name="keys" value="keys">
-                                    <button type="submit" class="btn btn-outline-success">Add Service</button>
+                                    <button type="submit" class="btn btn-success">Add Service</button>
                                 </form>
                             <a href="https://lifehacker.com/5848743/break-into-your-car-the-safe-and-easy-way"
                                  style="margin-top: 5px">How to unlock your car</a>
@@ -176,7 +183,7 @@
                                 <form action="{% url 'help:add'%}" method="post">
                                     {% csrf_token %}
                                     <input type='hidden' name="frozen" value="frozen">
-                                    <button type="submit" class="btn btn-outline-success">Add Service</button>
+                                    <button type="submit" class="btn btn-success">Add Service</button>
                                 </form>
                               <a href="https://www.youtube.com/watch?v=n6ncTH6UO1U" style="margin-top: 5px">How to unfreeze your car</a>
                       </div>
@@ -218,7 +225,7 @@
                                 <form action="{% url 'help:add'%}" method="post">
                                     {% csrf_token %}
                                     <input type='hidden' name="battery" value="battery">
-                                    <button type="submit" class="btn btn-outline-success">Add Service</button>
+                                    <button type="submit" class="btn btn-success">Add Service</button>
                                 </form>
                               <a href="https://www.meineke.com/blog/jump-start-car-battery-right-way/"
                                  style="margin-top: 5px">How to Jump Start a Car Battery</a>
@@ -261,7 +268,7 @@
                             <form action="{% url 'help:add'%}" method="post">
                                 {% csrf_token %}
                                 <input type='hidden' name="fuel" value="fuel">
-                                <button type="submit" class="btn btn-outline-success">Add Service</button>
+                                <button type="submit" class="btn btn-success">Add Service</button>
                             </form>
                         </div>
                     </div>
@@ -311,7 +318,7 @@
                                                        id="manul_address"
                                                        placeholder="Enter address"
                                                        style="padding: 3px;
-                                                       border: 1px solid rebeccapurple;
+                                                       border: 1px solid #571746;
                                                        border-radius: 5px"></label>
             </div>
         </div>
@@ -335,7 +342,7 @@
                          src="http://drive.google.com/uc?export=view&id=1-KalT8-Eolxhbs19mUmjqQL9wF4eLpO5"
                          alt="tire" style="width: 20px; height: 20px; margin-top: -10px">
                     <input type="text" required name="phone" placeholder="enter phone number" id="phone"
-                           style="padding: 3px; border: 1px solid rebeccapurple; border-radius: 5px"></label>
+                           style="padding: 3px; border: 1px solid #571746; border-radius: 5px"></label>
                 <button type="submit" class="bottom_margin btn btn-primary btn-lg btn-block"
                         id="request">Request Services</button>
 

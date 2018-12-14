@@ -185,10 +185,6 @@ def about(request):
     return render(request, 'helper/about.html')
 
 
-def services(request):
-    return render(request, 'helper/services.html')
-
-
 def unfreeze(request):
     return render(request, 'helper/unfreeze_car.html')
 

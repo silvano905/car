@@ -5,7 +5,6 @@ app_name = 'help'
 
 urlpatterns = [
     path('', views.add_auto, name='home'),
-    path('services/', views.services, name='services'),
     path('fuel-delivery/', views.fuel_delivery, name='fuel_delivery'),
     path('car-unlock-service/', views.car_unlock, name='unlock_car'),
     path('jump-start-car/', views.battery_jump_start, name='jump_start'),
