@@ -58,23 +58,23 @@ def add_indi(request):
         elif frozen:
             for i in all_services:
                 i.freeze = True
-                i.total = F('total') + 49
+                i.total = F('total') + 39
                 i.save()
         elif fuel:
             for i in all_services:
                 i.gas = True
-                i.total = F('total') + 49
+                i.total = F('total') + 39
                 i.save()
 
         elif battery:
             for i in all_services:
                 i.battery = True
-                i.total = F('total') + 49
+                i.total = F('total') + 39
                 i.save()
         elif keys:
             for i in all_services:
                 i.keys = True
-                i.total = F('total') + 49
+                i.total = F('total') + 39
                 i.save()
         elif get_language:
             for i in all_services:

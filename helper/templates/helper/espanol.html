@@ -53,7 +53,7 @@
                   <div class="card-body">
                     <h5 class="card-title">¿Olvidó las llaves de su carro dentro de su carro?</h5>
                     <p class="card-text">Podemos abrir tu puerta sin dañar nada.</p>
-                    <p class="price card-text">precio: $49</p>
+                    <p class="price card-text">precio: $39</p>
                             <form action="{% url 'help:add'%}" method="post">
                                 {% csrf_token %}
                                 <input type='hidden' name="keys" value="keys">
@@ -73,7 +73,7 @@
                     <div class="card-body">
                         <h5 class="card-title">¿Olvidó las llaves de su carro dentro de su carro?</h5>
                         <p class="card-text">Podemos abrir tu puerta sin dañar nada.</p>
-                        <p class="price card-text">precio: $49</p>
+                        <p class="price card-text">precio: $39</p>
                         <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Eliminar todo</button></a>
                     </div>
                 </div>
@@ -89,7 +89,7 @@
                   <div class="card-body">
                     <h5 class="card-title">¿Puerta congelada?</h5>
                     <p class="card-text">Podemos descongelar la puerta de su carro en menos de 5 minutos.</p>
-                    <p class="price card-text">precio: $49</p>
+                    <p class="price card-text">precio: $39</p>
                             <form action="{% url 'help:add'%}" method="post">
                                 {% csrf_token %}
                                 <input type='hidden' name="frozen" value="frozen">
@@ -109,7 +109,7 @@
                   <div class="card-body">
                     <h5 class="card-title">¿Puerta congelada?</h5>
                     <p class="card-text">Podemos descongelar la puerta de su carro en menos de 5 minutos.</p>
-                    <p class="price card-text">precio: $49</p>
+                    <p class="price card-text">precio: $39</p>
                         <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Eliminar todo</button></a>
 
                   </div>
@@ -126,7 +126,7 @@
                   <div class="card-body">
                     <h5 class="card-title">¿Bateria muerta?</h5>
                     <p class="card-text">Podemos ayudarte con tu batería muerta.</p>
-                    <p class="price card-text">precio: $49</p>
+                    <p class="price card-text">precio: $39</p>
                             <form action="{% url 'help:add'%}" method="post">
                                 {% csrf_token %}
                                 <input type='hidden' name="battery" value="battery">
@@ -146,7 +146,7 @@
                   <div class="card-body">
                     <h5 class="card-title">¿Bateria muerta?</h5>
                     <p class="card-text">Podemos ayudarte con tu batería muerta.</p>
-                    <p class="price card-text">precio: $49</p>
+                    <p class="price card-text">precio: $39</p>
                         <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Eliminar todo</button></a>
 
                   </div>
@@ -163,7 +163,7 @@
                   <div class="card-body">
                     <h5 class="card-title">¿Necesitas combustible?</h5>
                     <p class="card-text">Podemos entregarle 2.2 galones de combustible en caso de emergencia.</p>
-                    <p class="price card-text">precio: $59</p>
+                    <p class="price card-text">precio: $39</p>
                             <form action="{% url 'help:add'%}" method="post">
                                 {% csrf_token %}
                                 <input type='hidden' name="fuel" value="fuel">
@@ -184,58 +184,58 @@
                   <div class="card-body">
                     <h5 class="card-title">¿Necesitas combustible?</h5>
                     <p class="card-text">Podemos entregarle 2.2 galones de combustible en caso de emergencia.</p>
-                    <p class="price card-text">Precio: $59</p>
+                    <p class="price card-text">Precio: $39</p>
                          <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Eliminar todo</button></a>
 
                   </div>
                 </div>
             </div>
         {% endif %}
-        {% if not x.tire %}
-            <div class="col-lg-6 col-12">
-                <div class="card_width_tire card purple_shadow">
-                    <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1Ei_BiAqGkn_OT-zt3p64Q_Nv6hJhwqBV" alt="flat tire change">
-
-                  <div class="card-body">
-                    <h5 class="card-title">¿Neumático desinflado?</h5>
-                    <p class="card-text">Podemos instalar un neumático de repuesto temporal para su coche. O solicite una llanta de repuesto si no la tiene</p>
-
-                    <p class="price card-text">precio: $<span id="total">70</span></p>
-                            <form action="{% url 'help:add'%}" method="post">
-                                {% csrf_token %}
-                                  <label for="sell">Haga clic para agregar llanta de repuesto si no tienes una <select id="sell" name="quantity">
-                                    <option value="0" selected>aquí</option>
-                                    <option value="1">1 llanta</option>
-                                  </select></label>
-                                <input type='hidden' name="tires" value="tires">
-                                <button type="submit" id="tires" class="btn btn-outline-success">Agregar Servicio</button>
-                            </form>
-                  </div>
-                </div>
-            </div>
-        {% else %}
-            <div class="col-lg-6 col-12">
-                <div class="card_width_tire card purple_shadow">
-                    <div class="card-img-caption">
-                        <div class="card-text"><h1 class="added">agregado</h1></div>
-                    <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1Ei_BiAqGkn_OT-zt3p64Q_Nv6hJhwqBV" alt="flat tire change">
-                    </div>
-
-                  <div class="card-body">
-                        <h5 class="card-title">¿Neumático desinflado?</h5>
-                        <p class="card-text">Podemos instalar un neumático de repuesto temporal para su coche. O solicite una llanta de repuesto si no la tiene</p>
-                        {% if x.quantity == 1 %}
-                            <p class="price">Tu agregaste {{ x.quantity }} llanta de repuesto</p>
-                            <p class="price">$99</p>
-                        {% else %}
-                            <p class="price">price: $70</p>
-                        {% endif %}
-                        <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Eliminar todo</button></a>
-
-                  </div>
-                </div>
-            </div>
-        {% endif %}
+{#        {% if not x.tire %}#}
+{#            <div class="col-lg-6 col-12">#}
+{#                <div class="card_width_tire card purple_shadow">#}
+{#                    <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1Ei_BiAqGkn_OT-zt3p64Q_Nv6hJhwqBV" alt="flat tire change">#}
+{##}
+{#                  <div class="card-body">#}
+{#                    <h5 class="card-title">¿Neumático desinflado?</h5>#}
+{#                    <p class="card-text">Podemos instalar un neumático de repuesto temporal para su coche. O solicite una llanta de repuesto si no la tiene</p>#}
+{##}
+{#                    <p class="price card-text">precio: $<span id="total">70</span></p>#}
+{#                            <form action="{% url 'help:add'%}" method="post">#}
+{#                                {% csrf_token %}#}
+{#                                  <label for="sell">Haga clic para agregar llanta de repuesto si no tienes una <select id="sell" name="quantity">#}
+{#                                    <option value="0" selected>aquí</option>#}
+{#                                    <option value="1">1 llanta</option>#}
+{#                                  </select></label>#}
+{#                                <input type='hidden' name="tires" value="tires">#}
+{#                                <button type="submit" id="tires" class="btn btn-outline-success">Agregar Servicio</button>#}
+{#                            </form>#}
+{#                  </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        {% else %}#}
+{#            <div class="col-lg-6 col-12">#}
+{#                <div class="card_width_tire card purple_shadow">#}
+{#                    <div class="card-img-caption">#}
+{#                        <div class="card-text"><h1 class="added">agregado</h1></div>#}
+{#                    <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1Ei_BiAqGkn_OT-zt3p64Q_Nv6hJhwqBV" alt="flat tire change">#}
+{#                    </div>#}
+{##}
+{#                  <div class="card-body">#}
+{#                        <h5 class="card-title">¿Neumático desinflado?</h5>#}
+{#                        <p class="card-text">Podemos instalar un neumático de repuesto temporal para su coche. O solicite una llanta de repuesto si no la tiene</p>#}
+{#                        {% if x.quantity == 1 %}#}
+{#                            <p class="price">Tu agregaste {{ x.quantity }} llanta de repuesto</p>#}
+{#                            <p class="price">$99</p>#}
+{#                        {% else %}#}
+{#                            <p class="price">price: $70</p>#}
+{#                        {% endif %}#}
+{#                        <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Eliminar todo</button></a>#}
+{##}
+{#                  </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        {% endif %}#}
 
 
         </div>
