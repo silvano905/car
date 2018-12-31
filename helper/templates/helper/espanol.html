@@ -241,24 +241,13 @@
         </div>
 
 
-        <div class="top_margin">
-            <div align="center"><h3 style="color: #cc1111">Por favor enciende tu ubicación en tu celular</h3></div>
-            <div id="map" class="bottom_margin top_margin"></div>
-
-                        <button class="btn btn-primary" id="incorrect_button">¿Tu dirección es incorrecta?</button>
-                <div style="visibility: hidden; display: none" id="incorrect_div">
-                    <p>Recargar y activar la ubicación <span><img src="http://drive.google.com/uc?export=view&id=1g1fHSex0x2pi3VJY3I6dz2iET-53qpji" alt="location" style="width: 25px; height: 25px"></span></p>
-                    <div style="margin-top: -15px; margin-bottom: 10px">
-                        <a href="{% url 'help:home'%}"><button class="btn btn-primary btn-sm">Actualizar página</button></a>
-                    </div>
-                    <label>O ingrese la dirección manualmente<input type="text" id="manul_address" placeholder="Ingresa ti dirección" style="padding: 3px; border: 1px solid rebeccapurple; border-radius: 5px"></label>
-                </div>
-        </div>
 
 
+<p style="color: red; margin-top: 10px">Ingresa tu dirección</p><input type="text" id="manul_address" style="padding: 3px;
+                                                       border: 1px solid #571746;
+                                                       border-radius: 5px">
     <div class="col-lg-12">
 
-        <p align="center">Cuando esté listo para agregar sus servicios, presione el botón de abajo</p>
         {% for bere in all %}
         <h3 style="color: mediumseagreen">Total: ${{ bere.total }}</h3>
             <h5 style="color: #0005cc">Aceptamos tarjeta de crédito / débito, efectivo o Venmo.</h5>
