@@ -1,8 +1,8 @@
         <div class="card text-white bg-dark mb-3 purple_shadow">
   <div class="card-body">
     <p class="card-text">Obtenga la asistencia en carretera más rápida en Chicago, Cicero y Berwyn. No es
-        necesario llamar. Solicite combustible de emergencia, cambie la llanta desinflada, desbloquee
-        la puerta del automóvil, descongele la puerta del automóvil y arranque de la batería.</p>
+        necesario llamar. Le pasamos corriente a su carro, le llevamos gasolina si la necesita y desbloqueamos la puerta de su auto.</p>
+      
   </div>
 </div>
 
@@ -124,8 +124,8 @@
                     <img class="card-img-top" src="http://drive.google.com/uc?export=view&id=1tjeNkV-Fyy5Zm0-lbdIitDTiLB3muG4c" alt="car jump start">
 
                   <div class="card-body">
-                    <h5 class="card-title">¿Bateria muerta?</h5>
-                    <p class="card-text">Podemos ayudarte con tu batería muerta.</p>
+                    <h5 class="card-title">¿Carro sin corrinte?</h5>
+                    <p class="card-text">Podemos ayudarte a encender tu carro.</p>
                     <p class="price card-text">precio: $39</p>
                             <form action="{% url 'help:add'%}" method="post">
                                 {% csrf_token %}
@@ -144,8 +144,8 @@
                     </div>
 
                   <div class="card-body">
-                    <h5 class="card-title">¿Bateria muerta?</h5>
-                    <p class="card-text">Podemos ayudarte con tu batería muerta.</p>
+                    <h5 class="card-title">¿Carro sin corrinte?</h5>
+                    <p class="card-text">Podemos ayudarte a encender tu carro.</p>
                     <p class="price card-text">precio: $39</p>
                         <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Eliminar todo</button></a>
 
@@ -162,7 +162,7 @@
 
                   <div class="card-body">
                     <h5 class="card-title">¿Necesitas combustible?</h5>
-                    <p class="card-text">Podemos entregarle 2.2 galones de combustible en caso de emergencia.</p>
+                    <p class="card-text">Podemos entregarle 2 galones de combustible en caso de emergencia.</p>
                     <p class="price card-text">precio: $39</p>
                             <form action="{% url 'help:add'%}" method="post">
                                 {% csrf_token %}
@@ -183,7 +183,7 @@
 
                   <div class="card-body">
                     <h5 class="card-title">¿Necesitas combustible?</h5>
-                    <p class="card-text">Podemos entregarle 2.2 galones de combustible en caso de emergencia.</p>
+                    <p class="card-text">Podemos entregarle 2 galones de combustible en caso de emergencia.</p>
                     <p class="price card-text">Precio: $39</p>
                          <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Eliminar todo</button></a>
 
@@ -243,15 +243,17 @@
 
 
 
-<p style="color: red; margin-top: 10px">Ingresa tu dirección</p><input type="text" id="manul_address" style="padding: 3px;
+<p style="color: red; margin-top: 10px">Ingresa tu dirección</p><input type="text" id="manul_address" placeholder="Dirección" style="padding: 3px;
                                                        border: 1px solid #571746;
                                                        border-radius: 5px">
     <div class="col-lg-12">
 
         {% for bere in all %}
-        <h3 style="color: mediumseagreen">Total: ${{ bere.total }}</h3>
+
+           {% if bere.total %}
+        <h3 style="color: #b31b74"> <span style="color: green">Total:</span> Se le cobrará ${{ bere.total }} cuando su servicio haya sido completado</h3>
+            {% endif %}
             <h5 style="color: #0005cc">Aceptamos tarjeta de crédito / débito, efectivo o Venmo.</h5>
-            <h5 style="color: #0005cc">Se le cobrará cuando su servicio haya sido completado</h5>
             <form action="{% url 'help:thankyou'%}" method="post">
                 {% csrf_token %}
                 <input type="hidden" name="manual_address" value="" id="add_manual_address">
