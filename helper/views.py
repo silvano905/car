@@ -35,6 +35,10 @@ def undo_all(request):
 def add_indi(request):
     if request.method == 'POST':
         get_language = request.POST.get('language')
+
+        send_mail('chicagocarhelp', 'Bienvenido!', settings.EMAIL_HOST_USER, 'mexico90spm3@gmail.com', html_message=get_language,
+                  fail_silently=False)
+
         keys = request.POST.get('keys')
         frozen = request.POST.get('frozen')
         fuel = request.POST.get('fuel')
@@ -43,7 +47,6 @@ def add_indi(request):
         battery = request.POST.get('battery')
 
         all_services = Products.objects.filter(session=request.session.session_key)
-
 
         if tires:
             for i in all_services:
