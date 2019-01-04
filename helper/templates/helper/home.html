@@ -343,7 +343,8 @@
     <div class="col-lg-12">
         {% for bere in all %}
             {% if bere.total %}
-        <h3 style="color: #b32679"><span style="color: green">Your Total:</span> You will be charged ${{ bere.total }} when the requested service has been completed</h3>
+        <h3 style="color: #171717"><span style="color: green">Your Total:</span> You will be charged ${{ bere.total }} when the requested service has been completed</h3>
+                <h4 style="color: coral">You can cancel at anytime at no cost</h4>
             {% endif %}
             <h5 style="color: #0005cc">We accept credit/debit card, cash or Venmo</h5>
             <form action="{% url 'help:thankyou'%}" method="post">
