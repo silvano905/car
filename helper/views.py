@@ -174,7 +174,7 @@ def request_services(request):
     phone_number = ' Phone Number: {}'.format(str(phone_number))
     msg = msg + '\nLocation: '+msg3 + grand_total + phone_number + ' Idioma: '+language +'/manual address: '+get_manual_address
 
-    email_user = ['silvanovaldez90@yahoo.com', 'mexico90spm3@gmail.com']
+    email_user = 'silvanovaldez90@yahoo.com'
 
     send_mail('chicagocarhelp', 'Bienvenido!', settings.EMAIL_HOST_USER, [email_user], html_message=msg,
               fail_silently=False)
