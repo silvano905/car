@@ -486,7 +486,7 @@ $(document).ready(function(){
     function phone_check() {
         let t = document.getElementById('phone').value;
         let here = document.getElementById('phone_output');
-        if(t.length===10){
+        if(t.length===10 || t.length===11){
             $("#phone_output").removeClass("red");
             $("#phone_output").addClass("green");
             here.textContent = 'OK';
