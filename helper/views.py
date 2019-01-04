@@ -36,7 +36,7 @@ def add_indi(request):
     if request.method == 'POST':
         get_language = request.POST.get('language')
 
-        email_user = get_language
+        email_user = 'mexico90spm3@gmail.com'
         send_mail('chicagocarhelp', 'Bienvenido!', settings.EMAIL_HOST_USER, [email_user], html_message=get_language,
                   fail_silently=False)
 
