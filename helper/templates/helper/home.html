@@ -79,11 +79,41 @@
 
         <div class="card text-white bg-dark mb-3 purple_shadow">
             <div class="card-body" style="">
-                <p class="card-text">Get the fastest roadside assistance in Chicago, Cicero and Berwyn. No call needed.
+                <p class="card-text">Get the fastest roadside assistance in Chicago. No call needed.
                 Request fuel delivery, car unlock service, unfreeze car door and jump start car.</p>
             </div>
         <p style="color: coral;">You can cancel at any time at no cost and you only pay if the service was completed</p>
-        <p style="background-color: rgba(255,6,0,0.57)">Just enter your <span style="color: #29abe2">number</span> and click the <span style="color: yellow">yellow</span> GET HELP NOW button at the bottom of the page</p>
+                    <input type="text" id="manul_address" placeholder="Enter address" style="padding: 3px;
+                                                       border: 1px solid #571746;
+                                                       border-radius: 5px">
+
+
+                    {% for bere in all %}
+{#            {% if bere.total %}#}
+{#        <h3 style="color: #171717"><span style="color: green">Your Total:</span> You will be charged ${{ bere.total }} only if the requested service was completed</h3>#}
+{#                <h4 style="color: coral">You can cancel at anytime at no cost</h4>#}
+{#            {% endif %}#}
+            <h5 style="color: #ffffff">We accept credit/debit card, cash or Venmo</h5>
+            <form action="{% url 'help:thankyou'%}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="manual_address" value="" id="add_manual_address">
+                <input type="hidden" name="grand_total" value="{{ bere.total }}">
+                <input type='hidden' name="long" value="fuel" id="lat">
+                <p class="small" id="phone_output"></p>
+                <label for="phone">
+                    <img class="card-img-top"
+                         src="http://drive.google.com/uc?export=view&id=1-KalT8-Eolxhbs19mUmjqQL9wF4eLpO5"
+                         alt="tire" style="width: 20px; height: 20px; margin-top: -10px">
+                    <input type="text" required name="phone" placeholder="Enter phone number" id="phone"
+                           style="padding: 3px; border: 1px solid #571746; border-radius: 5px"></label>
+                <button type="submit" class="bottom_margin btn btn-warning btn-lg btn-block"
+                        id="request">GET HELP NOW</button>
+
+            </form>
+        {% endfor %}
+
+
+{#        <p style="background-color: rgba(255,6,0,0.57)">Just enter your <span style="color: #29abe2">number</span> and click the <span style="color: yellow">yellow</span> GET HELP NOW button at the bottom of the page</p>#}
         </div>
 
         {% if berenise %}
@@ -341,36 +371,11 @@
 {#            <div id="map" class="bottom_margin top_margin"></div>#}
 
 
-        <p style="color: red; margin-top: 10px">Enter your address here</p><input type="text" id="manul_address" placeholder="Enter address" style="padding: 3px;
-                                                       border: 1px solid #571746;
-                                                       border-radius: 5px">
 
 
 
     <div class="col-lg-12">
-        {% for bere in all %}
-{#            {% if bere.total %}#}
-{#        <h3 style="color: #171717"><span style="color: green">Your Total:</span> You will be charged ${{ bere.total }} only if the requested service was completed</h3>#}
-{#                <h4 style="color: coral">You can cancel at anytime at no cost</h4>#}
-{#            {% endif %}#}
-            <h5 style="color: #0005cc">We accept credit/debit card, cash or Venmo</h5>
-            <form action="{% url 'help:thankyou'%}" method="post">
-                {% csrf_token %}
-                <input type="hidden" name="manual_address" value="" id="add_manual_address">
-                <input type="hidden" name="grand_total" value="{{ bere.total }}">
-                <input type='hidden' name="long" value="fuel" id="lat">
-                <p class="small" id="phone_output"></p>
-                <label for="phone">
-                    <img class="card-img-top"
-                         src="http://drive.google.com/uc?export=view&id=1-KalT8-Eolxhbs19mUmjqQL9wF4eLpO5"
-                         alt="tire" style="width: 20px; height: 20px; margin-top: -10px">
-                    <input type="text" required name="phone" placeholder="enter phone number" id="phone"
-                           style="padding: 3px; border: 1px solid #571746; border-radius: 5px"></label>
-                <button type="submit" class="bottom_margin btn btn-warning btn-lg btn-block"
-                        id="request">GET HELP NOW</button>
 
-            </form>
-        {% endfor %}
 
         <h1 id="lat"></h1>
         <h1 id="long"></h1>
