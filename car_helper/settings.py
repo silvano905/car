@@ -26,7 +26,6 @@ SECRET_KEY = os.environ['MY_KEY_CAR']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 ALLOWED_HOSTS = ['silvano90help.pythonanywhere.com', '127.0.0.1', 'chicagocarhelp.com','www.chicagocarhelp.com', 'https://silvano90help.pythonanywhere.com']
 
 
