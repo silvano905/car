@@ -1,6 +1,8 @@
 from django.urls import path, include, re_path
 from django.contrib.auth.views import LoginView, LogoutView
 from django.http import HttpResponse
+from django.views.generic import TemplateView
+
 from . import views
 app_name = 'help'
 
@@ -15,6 +17,9 @@ urlpatterns = [
     path('add/',views.add_indi, name='add'),
     path('thankyou/', views.request_services, name='thankyou'),
     path('sitemap.xml', views.site_map, name='sitemap'),
-    path('^robots.txt$', lambda r: HttpResponse("User-agent: *\nDisallow: ", mimetype="text/plain"))
+    path('robots.txt', TemplateView.as_view(template_name="helper/robots.txt", content_type="text/plain"),
+         name="robots_file")
 
 ]
+
+
