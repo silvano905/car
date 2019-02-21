@@ -1,5 +1,6 @@
 from django.urls import path, include, re_path
 from django.contrib.auth.views import LoginView, LogoutView
+from django.http import HttpResponse
 from . import views
 app_name = 'help'
 
@@ -13,6 +14,7 @@ urlpatterns = [
     path('undo/', views.undo_all, name='undo'),
     path('add/',views.add_indi, name='add'),
     path('thankyou/', views.request_services, name='thankyou'),
-    path('sitemap.xml', views.site_map, name='sitemap')
+    path('sitemap.xml', views.site_map, name='sitemap'),
+    path('^robots.txt$', lambda r: HttpResponse("User-agent: *\nDisallow: ", mimetype="text/plain"))
 
 ]
