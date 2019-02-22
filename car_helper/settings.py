@@ -16,6 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 STATIC_DIR = os.path.join(BASE_DIR, 'helper/static')
+MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,7 +26,7 @@ STATIC_DIR = os.path.join(BASE_DIR, 'helper/static')
 SECRET_KEY = os.environ['MY_KEY_CAR']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['silvano90help.pythonanywhere.com', '127.0.0.1', 'chicagocarhelp.com','www.chicagocarhelp.com', 'https://silvano90help.pythonanywhere.com']
 
 
@@ -127,6 +128,8 @@ STATICFILES_DIR = [STATIC_DIR]
 STATIC_ROOT = 'helper/static'
 
 LOGIN_REDIRECT_URL = '/'
+MEDIA_ROOT = MEDIA_DIR
+MEDIA_URL = '/media/'
 
 SEND_GRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
 EMAIL_HOST = 'smtp.sendgrid.net'

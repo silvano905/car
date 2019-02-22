@@ -17,11 +17,11 @@ from django.contrib import admin
 from django.urls import path, include, re_path, reverse_lazy
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth import views as auth_views
-
-
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('berenisesilvano/', admin.site.urls),
     path('', include('helper.urls')),
 
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

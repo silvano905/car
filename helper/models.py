@@ -20,3 +20,10 @@ class Products(models.Model):
 
     def get_absolute_url(self):
         return reverse('help:services', kwargs={'session': self.session})
+
+
+class Profile(models.Model):
+    profile_pic = models.ImageField(upload_to='media', blank=True)
+
+    def __str__(self):
+        return self.profile_pic.path
