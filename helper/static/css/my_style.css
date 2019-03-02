@@ -4,6 +4,18 @@ img{
     object-fit: contain;
 }
 
+.bl{
+    background-color: #1f6e93;
+    color: white;
+    margin: 3px;
+}
+
+.rd{
+    background-color: #8e0400;
+    color: white;
+    margin: 3px;
+}
+
 .make_big{
     font-size: 30px;
 
