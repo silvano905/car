@@ -6,11 +6,15 @@ img{
 
 .bl{
     background-color: #171717;
+    border-radius: 3px;
+    color: white;
     margin: 3px;
 }
 
 .rd{
     background-color: #171717;
+    border-radius: 3px;
+    color: white;
     margin: 3px;
 }
 
