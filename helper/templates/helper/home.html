@@ -95,7 +95,6 @@
 {#        <h3 style="color: #171717"><span style="color: green">Your Total:</span> You will be charged ${{ bere.total }} only if the requested service was completed</h3>#}
 {#                <h4 style="color: coral">You can cancel at anytime at no cost</h4>#}
 {#            {% endif %}#}
-            <h5 style="color: #ffffff">We accept credit/debit card, cash or Venmo</h5>
             <form action="{% url 'help:thankyou'%}" method="post">
                 {% csrf_token %}
                 <input type="hidden" name="manual_address" value="" id="add_manual_address">
@@ -110,6 +109,8 @@
                            style="padding: 3px; border: 1px solid #571746; border-radius: 5px"></label>
                 <button type="submit" class="silva bottom_margin btn btn-danger btn-lg btn-block"
                         id="request">CLICK HERE FOR JUMP START</button>
+                        <h5 style="color: #ffffff">We accept credit/debit card, cash or Venmo</h5>
+
 
             </form>
         {% endfor %}
