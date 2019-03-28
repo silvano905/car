@@ -165,10 +165,10 @@ img{
   -webkit-animation: glowing 1500ms infinite;
   -moz-animation: glowing 1500ms infinite;
   -o-animation: glowing 1500ms infinite;
-  animation: glowing 1900ms infinite;
+  animation: glowing 2400ms infinite;
 }
 @-webkit-keyframes glowing {
   0% { background-color: #006208; -webkit-box-shadow: 0 0 3px #006208; }
-  50% { background-color: #0a8516; -webkit-box-shadow: 0 0 40px #0a8516; }
+  50% { background-color: #0a7016; -webkit-box-shadow: 0 0 40px #0a7016; }
   100% { background-color: #006208; -webkit-box-shadow: 0 0 3px #006208; }
 }
