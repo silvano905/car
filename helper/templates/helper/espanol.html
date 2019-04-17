@@ -31,8 +31,7 @@
                 <input type='hidden' name="long" value="fuel" id="lat">
                 <p class="small" id="phone_output"></p>
                 <label for="phone">
-                    src="/media/media/jumpstart_phone.png"
-                         alt="tire" style="width: 20px; height: 20px; margin-top: -10px">
+
 <input type="text" required name="phone" placeholder="Ingresa número telefónico" id="phone" style="padding: 3px; border: 1px solid rebeccapurple; border-radius: 5px"></label>
                 <button type="submit" class="bottom_margin btn btn-danger btn-lg btn-block" id="request">PRESIONE AQUI PARA AYUDA</button>
 
@@ -208,45 +207,8 @@
 
         {% endif %}
 
-        {% if not x.freeze %}
-            <div class="col-lg-6 col-12">
-                <div class="card_width card purple_shadow">
-                    <img class="card-img-top" src="/media/media/jumpstart_frozen.jpg" alt="unfreeze car door">
 
-                  <div class="card-body">
-                    <h5 class="card-title">¿Puerta congelada?</h5>
-                    <p class="card-text">Podemos descongelar la puerta de su carro en menos de 5 minutos.</p>
-                    <p class="price card-text">precio: $39</p>
-                            <form action="{% url 'help:add'%}" method="post">
-                                {% csrf_token %}
-                                <input type='hidden' name="frozen" value="frozen">
-                                <button type="submit" class="btn btn-outline-success">Agregar Servicio</button>
-                            </form>
-                  </div>
-                </div>
-            </div>
-        {% else %}
-            <div class="col-lg-6 col-12">
-                <div class="card_width card purple_shadow">
-                    <div class="card-img-caption">
-                        <div class="card-text"><h1 class="added">agregado</h1></div>
-                    <img class="card-img-top" src="/media/media/jumpstart_frozen.jpg" alt="unfreeze car door">
-                    </div>
-
-                  <div class="card-body">
-                    <h5 class="card-title">¿Puerta congelada?</h5>
-                    <p class="card-text">Podemos descongelar la puerta de su carro en menos de 5 minutos.</p>
-                    <p class="price card-text">precio: $39</p>
-                        <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Eliminar todo</button></a>
-
-                  </div>
-                </div>
-            </div>
-        {% endif %}
-
-
-
-
+        
         {% if not x.gas %}
             <div class="col-lg-6 col-12">
                 <div class="card_width card purple_shadow">
