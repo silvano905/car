@@ -45,9 +45,9 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{% url 'help:fuel_delivery'%}">Fuel delivery</a>
-                                <a class="dropdown-item" href="{% url 'help:jump_start'%}">Jump start car</a>
                                 <a class="dropdown-item" href="{% url 'help:unlock_car'%}">Car lockout service</a>
-                                <a class="dropdown-item" href="{% url 'help:unfreeze'%}">Unfreeze car door</a>
+                                <a class="dropdown-item" href="{% url 'help:jump_start'%}">Jump start car</a>
+
 
                     </div>
                 </li>
@@ -164,10 +164,10 @@
             </form>
         </div>
 
-            <img src="/media/media/here90Asset_24.png" alt="roadside assistance" style="width: 150px; display: block; margin-top: 10px">
+            <img src="/media/media/jumpstart_clock.png" alt="roadside assistance" style="width: 150px; display: block; margin-top: 10px">
         <div align="center" style="border: 2px solid white; margin-top: 5px; padding: 5px; width: 335px; background-color: #29abe2; border-radius: 7px">
             <h5 style="color: white">FAST</h5>
-        <h5 style="color: white">Will get to you in 10-25 minutes or less</h5>
+        <h5 style="color: white">Will get to you in 8-20 minutes</h5>
         </div>
 
 
@@ -178,7 +178,7 @@
             <div style="border: 1px solid black; width: 335px; height: 240px; background-color: #bce2b7; border-radius: 7px">
                 <p style="border: black 1px solid; background-color: black; color: white; width: 300px; border-radius: 7px; margin-top: 5px">Our price</p>
                 <img src="/media/media/jumpstart_ourprice.png" alt="free jump start" style="width: 180px;">
-                <img src="/media/media/Asset_17.png" alt="free jump start chicago" style="width: 240px">
+                <img src="/media/media/car_jump_price.png" alt="free jump start chicago" style="width: 240px">
             </div>
 
             <button id="dis-compe" class="btn btn-danger" style="margin-top: 8px">Check competition prices</button>
@@ -186,11 +186,11 @@
             <div style="border: black solid 1px; width: 335px; height: 350px; background-color: #cda4a4; border-radius: 7px; margin-top: 5px">
                 <p style="border: black 1px solid; background-color: black; color: white; width: 300px; border-radius: 7px; margin-top: 5px">Our Competition prices</p>
                 <img src="/media/media/jumpstart_urg.png" alt="jump start service" style="width: 180px; margin-top: 10px">
-                <img src="/media/media/jumpstart_price.png" alt="free jump start" style="width: 150px">
+                <img src="/media/media/here901Asset_27.png" alt="free jump start" style="width: 150px">
                 <a style="display: block" href="https://www.geturgently.com">Don't believe us? Check price</a>
 
                 <img src="/media/media/jumpstart_hon.png" alt="free jump start" style="width: 180px; margin-top: 20px">
-                <img src="/media/media/jumpstart_price.png" alt="car jump start service" style="width: 150px">
+                <img src="/media/media/here901Asset_26.png" alt="car jump start service" style="width: 150px">
                 <a style="display: block" href="https://mw.honkforhelp.com">Don't believe us? Check price</a>
             </div>
             </div>
@@ -350,47 +350,6 @@
 
             {% endif %}
 
-            {% if not x.freeze %}
-                <div class="col-lg-6 col-12">
-                    <div class="card_width card purple_shadow">
-                        <img class="card-img-top"
-                             src="/media/media/jumpstart_frozen.jpg" alt="unfreeze car lock">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Frozen door?</h5>
-                            <p class="card-text">We can unfreeze your car door in less than 3 minutes</p>
-                            <p class="price card-text">price: $39</p>
-                                <form action="{% url 'help:add'%}" method="post">
-                                    {% csrf_token %}
-                                    <input type='hidden' name="frozen" value="frozen">
-                                    <button type="submit" class="btn btn-success">Click to Add Service</button>
-                                </form>
-                      </div>
-                    </div>
-                </div>
-            {% else %}
-                <div class="col-lg-6 col-12">
-                    <div class="card_width card purple_shadow">
-                        <div class="card-img-caption">
-                            <div class="card-text">
-                                <h1 class="added">Added</h1>
-                            </div>
-                            <img class="card-img-top"
-                             src="/media/media/jumpstart_frozen.jpg" alt="unfreeze car lock">
-                        </div>
-
-                        <div class="card-body">
-                            <h5 class="card-title">Frozen door?</h5>
-                            <p class="card-text">We can unfreeze your car door in less than 3 minutes</p>
-                            <p class="price card-text">price: $39</p>
-                            <a href="{% url 'help:undo'%}"><button class="btn btn-danger">Remove All</button></a>
-                      </div>
-                    </div>
-                </div>
-            {% endif %}
-
-
-
 
             {% if not x.gas %}
                 <div class="col-lg-6 col-12">
@@ -490,7 +449,6 @@
             <p><span style="font-size: 22px">Unlock Car</span></p>
             <p><span style="font-size: 22px">Fuel Delivery</span></p>
             <p><span style="font-size: 22px">Jump Start Car Service</span></p>
-            <p><span style="font-size: 22px">Unfreeze Frozen door</span></p>
         </div>
 
     </div>
