@@ -3,14 +3,16 @@
 {% block body_block %}
 
     <img src="/media/media/jumpstart_thanks.jpg" alt="" style="width: 100%; height: auto">
-    <div align="center" class="price">{{ total }}</div>
 
 {% if lan == 'english' %}
+        <div class="container" align="center">
+            <h5 class="centered" style="color:#5477ff;">I will contact you in a few seconds.</h5>
+        </div>
+
     <div align="center">
-            <h5 style="color: #0005cc">We accept credit/debit card, cash or Venmo</h5>
-            <h5 style="color: #0005cc">You will be charged when your service has been completed</h5>
+            <h5>We accept credit/debit card, cash or Venmo</h5>
+            <h5>You will be charged when your service has been completed</h5>
     </div>
-    <div class="container"><h5 class="centered">Thank you for choosing WWW.CHICAGOCARHELP.COM for your road side assistance. I will contact you in a few minutes.</h5></div>
     {% else %}
     <div align="center">
                 <h5 style="color: #0005cc">Aceptamos tarjeta de crédito / débito, efectivo o Venmo.</h5>
