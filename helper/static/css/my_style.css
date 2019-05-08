@@ -108,7 +108,7 @@ img{
     text-align: start;
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 700px){
     .makebig{
         width: 600px;
         height: auto;
