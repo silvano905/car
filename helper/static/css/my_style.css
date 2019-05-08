@@ -108,7 +108,15 @@ img{
     text-align: start;
 }
 
+@media screen and (min-width: 1000px){
+    .makebig{
+        width: 600px;
+        height: auto;
+    }
 
+
+
+}
 
 @media screen and (max-width: 600px){
     .card_width{
