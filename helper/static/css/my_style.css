@@ -112,6 +112,9 @@ img{
     .makebig{
         width: 600px;
         height: auto;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px
     }
 
 
@@ -119,6 +122,9 @@ img{
 }
 
 @media screen and (max-width: 600px){
+
+    .makebig{width: 340px; display: block; margin-top: 10px; margin-bottom: 5px}
+
     .card_width{
         width: 16rem;
         height: 29rem;
