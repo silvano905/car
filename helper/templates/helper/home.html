@@ -91,8 +91,23 @@
 
 
                 <h5 class="card-text" style="background-color: #ff9c43; color: black">Battery dead or too weak to start car? Jump start it now to start your car for <span style="color: lime; background-color: black">$39</span></h5>
-                <p style="color: white; font-size: 15px; margin-bottom: -10px">Don't Know what a jump start is?</p>
+
+
+            <button id="dis-compe" class="btn btn-light" style="margin-top: 8px">Don't Know what a jump start is?</button>
+            <div style="visibility: hidden; display: none" id="show-compe">
+            <div style="border: black solid 1px; width: 335px; height: 125px; background-color: #ffffff; border-radius: 7px; margin-top: 5px">
+
+
+                <p style="color: black">A jump start, also called a boost, is to start (an engine or vehicle) that
+                    has a dead or weak battery by temporary connection to an external power
+                    source (such as another vehicle's battery or a jump starter)</p>
             </div>
+            </div>
+
+
+            </div>
+
+
         <div style="color: white; background-color: black; border-radius: 4px; margin: 0 1px 4px 1px">
             <p>Only pay if the jump was completed</p>
             <p style="color: lime">Enter location/phone for free estimate</p>
@@ -183,17 +198,19 @@
             </div>
 
             <button id="dis-compe" class="btn btn-light" style="margin-top: 15px">Check competition prices</button>
-            <div style="visibility: hidden; display: none" id="show-compe">
-            <div style="border: black solid 1px; width: 335px; height: 350px; background-color: #cda4a4; border-radius: 7px; margin-top: 5px">
-                <p style="border: black 1px solid; background-color: black; color: white; width: 300px; border-radius: 7px; margin-top: 5px">Our Competition prices</p>
-                <img src="/media/media/here901Asset_27.png" alt="jump start service" style="width: 180px; margin-top: 10px">
-                <img src="/media/media/jumpstart_price.png" alt="free jump start" style="width: 150px">
-                <a style="display: block" href="https://www.geturgently.com">Don't believe us? Check price</a>
 
-                <img src="/media/media/here901Asset_26.png" alt="free jump start" style="width: 180px; margin-top: 20px">
-                <img src="/media/media/jumpstart_price.png" alt="car jump start service" style="width: 150px">
-                <a style="display: block" href="https://mw.honkforhelp.com">Don't believe us? Check price</a>
-            </div>
+            <div style="visibility: hidden; display: none" id="show-compe">
+
+                <div style="border: black solid 1px; width: 335px; height: 350px; background-color: #cda4a4; border-radius: 7px; margin-top: 5px">
+                    <p style="border: black 1px solid; background-color: black; color: white; width: 300px; border-radius: 7px; margin-top: 5px">Our Competition prices</p>
+                    <img src="/media/media/here901Asset_27.png" alt="jump start service" style="width: 180px; margin-top: 10px">
+                    <img src="/media/media/jumpstart_price.png" alt="free jump start" style="width: 150px">
+                    <a style="display: block" href="https://www.geturgently.com">Don't believe us? Check price</a>
+
+                    <img src="/media/media/here901Asset_26.png" alt="free jump start" style="width: 180px; margin-top: 20px">
+                    <img src="/media/media/jumpstart_price.png" alt="car jump start service" style="width: 150px">
+                    <a style="display: block" href="https://mw.honkforhelp.com">Don't believe us? Check price</a>
+                </div>
             </div>
 
         </div>
@@ -585,6 +602,18 @@
     document.getElementById('dis-compe').addEventListener("click", xc, false)
 
 </script>
+
+
+<script>
+    function xcz() {
+        let whole_text = document.getElementById('show-compe').style;
+        whole_text.visibility = 'visible';
+        whole_text.display = 'block'
+
+    }
+    document.getElementById('dis-compe').addEventListener("click", xcz, false)
+</script>
+
 
 <script>
 $(document).ready(function(){
