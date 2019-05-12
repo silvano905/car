@@ -100,8 +100,8 @@
 
                 <p style="color: black">A jump start, also called a boost, is to start (an engine or vehicle) that
                     has a dead or weak battery by temporary connection to an external power
-                    source (such as another vehicle's battery or a jump starter). Once the vehicle has been started,
-                    the charging system will restore the charge of the battery.</p>
+                    source (such as another vehicle's battery or a jump starter). <strong>Once the vehicle has been started,
+                    the charging system will restore the charge of the battery.</strong></p>
             </div>
             </div>
 
@@ -112,7 +112,7 @@
         <div style="color: white; background-color: black; border-radius: 4px; margin: 0 1px 4px 1px">
             <p>Only pay if the jump was completed</p>
             <p style="color: lime">Enter location/phone for free estimate</p>
-                        <p style="color: lime; margin-top: -14px; margin-bottom: -7">Click green button when done</p>
+                        <p style="color: lime; margin-top: -14px; margin-bottom: -7px">Click green button when done</p>
 
         </div>
                     <input type="text" id="manul_address" placeholder="Enter your location" style="padding: 3px;
@@ -168,17 +168,17 @@
             <form action="{% url 'help:add'%}" method="post">
                 {% csrf_token %}
                 {% if x.language == 'english' %}
-                    <button type="submit" name="language" value="english" class="btn btn-success btn-sm">English</button>
+                    <button type="submit" name="language" value="english" class="btn btn-dark btn-sm">English</button>
                 {% else %}
-                    <button type="submit" name="language" value="english" class="btn btn-secondary btn-sm">English</button>
+                    <button type="submit" name="language" value="english" class="btn btn-light btn-sm">English</button>
                 {% endif %}
             </form>
             <form action="{% url 'help:add'%}" method="post">
                 {% csrf_token %}
                 {% if x.language == 'espanol' %}
-                    <button type="submit" name="language" value="espanol" class="btn btn-success btn-sm">Español</button>
+                    <button type="submit" name="language" value="espanol" class="btn btn-dark btn-sm">Español</button>
                 {% else %}
-                    <button type="submit" name="language" value="espanol" class="btn btn-secondary btn-sm">Español</button>
+                    <button type="submit" name="language" value="espanol" class="btn btn-light btn-sm">Español</button>
                 {% endif %}
             </form>
         </div>
@@ -234,7 +234,8 @@
                 <p>2) Your engine doesn't crank (no clicking noise) or start, and the lights don't come on.</p>
                 <p>3) One day it starts fine, then the next day it won't start at all.</p>
                 <p>4) You left the lights on over night.</p>
-                <p>5) Excessive heat or cold weather can weaken your battery. Hot temperatures can be worse
+                <p>5) It has been 2 or more weeks since you last drove your car.</p>
+                <p>6) Excessive heat or cold weather can weaken your battery. Hot temperatures can be worse
                     for your car than cold weather.</p>
             </div>
         </div>
