@@ -97,7 +97,10 @@ img{
     box-shadow: 5px 6px 8px 0 rgb(41, 171, 226), 0 6px 20px 0 rgba(41, 171, 226, 0.36);
 }
 
-
+.green_shadow{
+    max-width: 30rem;
+    box-shadow: 5px 6px 8px 0 rgb(0, 198, 62), 0 6px 20px 0 rgba(0, 226, 62, 0.36);
+}
 
 .purple_shadow_two{
     max-width: 50rem;
