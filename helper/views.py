@@ -129,8 +129,7 @@ def add_auto(request):
 def request_services(request):
     get_manual_address = request.POST.get('manual_address')
     phone_number = request.POST.get('phone')
-    grand_total = request.POST.get('grand_total')
-    long_lat = request.POST.get('long')
+
     xxx = Products.objects.filter(session=request.session.session_key)
     keys = ''
     gas = ''
@@ -169,16 +168,14 @@ def request_services(request):
         battery = 'no'
     msg1 = [tire, freeze, gas, battery, keys]
     msg = ", ".join(msg1)
-    msg3 = long_lat+' :Number of tiers '+str(quantity)
-    grand_total = ' Total: {}'.format(str(grand_total))
     phone_number = ' Phone Number: {}'.format(str(phone_number))
-    msg = msg + '\nLocation: '+msg3 + grand_total + phone_number + ' Idioma: '+language +'/manual address: '+get_manual_address
+    msg = msg + '\nPhone: '+ phone_number + ' Address: '+get_manual_address
 
     email_user = 'silvanovaldez90@yahoo.com'
 
     send_mail('chicagocarhelp', 'Bienvenido!', settings.EMAIL_HOST_USER, [email_user], html_message=msg,
               fail_silently=False)
-    return render(request, 'helper/thankyou.html', {'lan': language, 'total': grand_total})
+    return render(request, 'helper/thankyou.html', {'lan': language, 'total': "0"})
 
 
 def site_map(request):

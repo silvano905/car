@@ -153,9 +153,7 @@
             <p style="color: #009a00">Enter location/phone for free estimate</p>
 
         </div>
-                    <input type="text" id="manul_address" placeholder="Enter your location" style="padding: 3px;
-                                                       border: 1px solid #571746;
-                                                       border-radius: 5px">
+
 
 
                     {% for bere in all %}
@@ -165,9 +163,10 @@
 {#            {% endif %}#}
             <form action="{% url 'help:thankyou'%}" method="post">
                 {% csrf_token %}
-                <input type="hidden" name="manual_address" value="" id="add_manual_address">
-                <input type="hidden" name="grand_total" value="{{ bere.total }}">
-                <input type='hidden' name="long" value="fuel" id="lat">
+                                    <input type="text" name="manual_address" value="" id="add_manual_address" placeholder="Enter your location" style="padding: 3px;
+                                                       border: 1px solid #571746;
+                                                       border-radius: 5px">
+
                 <p class="small" id="phone_output"></p>
                 <label for="phone">
                     <img class="card-img-top"
