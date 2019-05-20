@@ -169,7 +169,7 @@ def request_services(request):
     msg1 = [tire, freeze, gas, battery, keys]
     msg = ", ".join(msg1)
     phone_number = ' Phone Number: {}'.format(str(phone_number))
-    msg = phone_number + str(get_manual_address)
+    msg = phone_number + "\nAddress: "+str(get_manual_address)
 
     email_user = 'silvanovaldez90@yahoo.com'
 
