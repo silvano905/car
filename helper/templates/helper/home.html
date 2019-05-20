@@ -156,12 +156,10 @@
 
 
 
+{#            {% if bere.total %}#}
                     {% for bere in all %}
 
-                                                            <input type="text" name="manual_address" value="" id="add_manual_address" placeholder="Enter your location" style="padding: 3px;
-                                                       border: 1px solid #571746;
-                                                       border-radius: 5px">
-{#            {% if bere.total %}#}
+
 {#        <h3 style="color: #171717"><span style="color: green">Your Total:</span> You will be charged ${{ bere.total }} only if the requested service was completed</h3>#}
 {#                <h4 style="color: coral">You can cancel at anytime at no cost</h4>#}
 {#            {% endif %}#}
@@ -169,6 +167,9 @@
                 {% csrf_token %}
 
 
+                <input type="text" name="manual_address" class="form-control" value="" id="add_manual_address" placeholder="Enter your location" style="padding: 3px;
+                                                       border: 1px solid #571746;
+                                                       border-radius: 5px">
                 <p class="small" id="phone_output"></p>
                 <label for="phone">
                     <img class="card-img-top"
