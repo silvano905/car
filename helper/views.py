@@ -17,7 +17,9 @@ from django.conf import settings
 from django.db.models import Count
 from django.db.models import F
 from datetime import datetime
+from django.views.decorators.cache import cache_page
 
+@cache_page(60 * 15)
 def undo_all(request):
     xxx = Products.objects.filter(session=request.session.session_key)
     for i in xxx:
@@ -87,6 +89,7 @@ def add_indi(request):
         return redirect('help:home')
 
 
+@cache_page(60 * 15)
 def add_auto(request):
     berenise = False
     vacations = 'open on Monday 5AM'
