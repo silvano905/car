@@ -41,13 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'helper.apps.HelperConfig',
     'bootstrap4',
+    'img_cache'
 
 ]
 
 MIDDLEWARE = [
-    'django.middleware.cache.UpdateCacheMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.cache.FetchFromCacheMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -149,4 +147,3 @@ CACHES = {
         'LOCATION': '127.0.0.1:11211',
     }
 }
-
