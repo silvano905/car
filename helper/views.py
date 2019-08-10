@@ -115,7 +115,10 @@ def add_auto(request):
             'vacations': vacations,
             'berenise': berenise
         }
-        return render(request, 'helper/home.html', context)
+
+        ll = render(request, 'helper/home.html', context)
+        ll['Cache-Control'] = 'public,max-age=10000'
+        return ll
     else:
         xx = Products.objects.create(session=session, keys=key, gas=gas, battery=battery, freeze=freeze, tire=tire, quantity=quantity, total=total, language=language)
         xx.save()
@@ -126,7 +129,10 @@ def add_auto(request):
             'vacations': vacations,
             'berenise': berenise
         }
-        return render(request, 'helper/home.html', context)
+
+        ll = render(request, 'helper/home.html', context)
+        ll['Cache-Control'] = 'public,max-age=10000'
+        return ll
 
 
 def request_services(request):
