@@ -195,10 +195,6 @@ def about(request):
     return render(request, 'helper/about.html')
 
 
-def unfreeze(request):
-    return render(request, 'helper/unfreeze_car.html')
-
-
 def car_unlock(request):
     return render(request, 'helper/car_unlock.html')
 
