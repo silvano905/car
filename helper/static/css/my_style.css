@@ -112,6 +112,9 @@ img{
 }
 
 @media screen and (min-width: 700px){
+        .img_pic{
+        width: 455px;
+    }
 
 
     .jumpservice_map{
@@ -149,6 +152,9 @@ img{
 }
 
 @media screen and (max-width: 600px){
+    .img_pic{
+        width: 300px;
+    }
 
 
     .jumpservice_map{
