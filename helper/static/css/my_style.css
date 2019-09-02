@@ -112,6 +112,20 @@ img{
 }
 
 @media screen and (min-width: 700px){
+    .carousel_img{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .carousel-inner > .carousel-item {
+  max-height: 500px;
+}
+
+.carousel-inner > .carousel-item img{
+    width: 100%;
+    height: 100%;
+}
+
         .img_pic{
         width: 455px;
     }
@@ -152,6 +166,20 @@ img{
 }
 
 @media screen and (max-width: 600px){
+        .carousel_img{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .carousel-inner > .carousel-item {
+  max-height: 300px;
+}
+
+.carousel-inner > .carousel-item img{
+    width: 100%;
+    height: 100%;
+}
+
     .img_pic{
         width: 300px;
     }
@@ -240,13 +268,6 @@ img{
 
 
 
-.carousel-inner > .carousel-item {
-  max-height: 500px;
-}
 
-.carousel-inner > .carousel-item img{
-    width: 100%;
-    height: 100%;
-}
 
 
