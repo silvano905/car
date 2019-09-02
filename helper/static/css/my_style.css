@@ -116,10 +116,7 @@ img{
 
 @media screen and (min-width: 700px){
 
-    .mainss{
-    padding: 5px;
-}
-        .mainx{
+    .mainx{
         font-size: 35px;
     }
 
@@ -177,13 +174,7 @@ img{
 }
 
 @media screen and (max-width: 600px){
-    .maxx{
-        font-size: 15px;
-    }
-    .mainss{
-        font-size: 17px;
-        padding: 5px;
-}
+
 
     .mainx{
         font-size: 10px;
