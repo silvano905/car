@@ -1,9 +1,4 @@
-.mainss{
-    border: 1px solid whitesmoke;
-    border-radius: 5px;
-    background-color: whitesmoke;
-    padding: 5px;
-}
+
 
 
 img{
@@ -120,6 +115,13 @@ img{
 }
 
 @media screen and (min-width: 700px){
+
+    .mainss{
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    padding: 5px;
+}
         .mainx{
         font-size: 35px;
     }
