@@ -112,6 +112,9 @@ img{
 }
 
 @media screen and (min-width: 700px){
+        .mainx{
+        font-size: 35px;
+    }
     .carousel_img{
         margin-left: 40px;
         margin-right: 40px;
@@ -166,6 +169,9 @@ img{
 }
 
 @media screen and (max-width: 600px){
+    .mainx{
+        font-size: 10px;
+    }
         .carousel_img{
         margin-left: 5px;
         margin-right: 5px;
