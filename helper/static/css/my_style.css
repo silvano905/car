@@ -113,8 +113,10 @@ img{
 
 @media screen and (min-width: 700px){
         .mainx{
+            color: red;
         font-size: 35px;
     }
+
     .carousel_img{
         margin-left: 40px;
         margin-right: 40px;
