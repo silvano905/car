@@ -5,134 +5,521 @@
 
 {% block body_block %}
 
-<h1><strong>Jump start service</strong></h1>
+<div style="margin-left: 40px; margin-right: 40px">
 
-    <div class="bottom_margin container" align="center">
-                            <div style="position: relative; text-align: center; color: white">
-                            <div style="margin-top: 5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                            </div>
-                            <img style="width: 100%"
-                             src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/chicagocarhelp_jumpstartservice.png"
-                             alt="chicagocarhelp jump start car service" title="Jump Start Car Service">
+ <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/testiing36Asset+3.png" alt="First slide">
+        <div class="carousel-caption d-none d-md-block">
+    <h1 style="color: white;">JUMP START CAR SERVICE CHICAGO IL</h1>
+    <h2>$39 Battery Jump Start Service</h2>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://jumpservicechicago.s3.us-east-2.amazonaws.com/testiing40Asset+3.png" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block">
+    <h1 style="color: white">CAR BATTERY JUMP SERVICE CHICAGO IL</h1>
+    <p>call now</p>
+  </div>
+    </div>
+
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+</div>
+
+
+
+
+            <div align="center" style="margin: 10px">
+
+                        <h3 style="border: 1px solid whitesmoke; border-radius: 5px; background-color: whitesmoke; padding: 5px">Reasons Why People In Chicago Request A Jump Start Service From Us</h3>
+
+
+
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+                        <div class="alert alert-success" role="alert">
+                            <h6><span style="border: 1px solid white; border-radius: 10%; padding: 4px; background-color: yellow">1</span>   Car won't start</h6>
                         </div>
+                    </div>
+                    <div class="col">
+                        <div class="alert alert-success" role="alert">
+                            <h6><span style="border: 1px solid white; border-radius: 10%; padding: 4px; background-color: yellow">2</span>   Dead car battery</h6>
 
-<h2>jump start service in Chicago for $39</h2>
-    <h5 style="margin: 15px"> Dead car battery? Need a jump start service? Just click the blue button to receive a <strong>jump start service</strong> to your car.
-       </h5>
-        <div align="center">
-            <a href="{% url 'help:home'%}"><button class="bottom_margin btn btn-info btn-lg btn-block">REQUEST A JUMP START HERE</button></a>
-                       <h6>For better/faster service please click the blue button. You can also call us.</h6>
-                        <a href="tel:+17085489664"><button class="btn btn-success btn-lg">CALL</button></a>
-                        <p>708-548-9664</p>
+                        </div>
+                    </div>
+                  </div>
+
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+
+                        <div class="alert alert-success" role="alert">
+                            <h6><span style="border: 1px solid white; border-radius: 10%; padding: 4px; background-color: yellow">3</span>  Weak car battery</h6>
+
+                        </div>
+                    </div>
+                    <div class="col">
+
+                        <div class="alert alert-success" role="alert">
+                             <h6><span style="border: 1px solid white; border-radius: 10%; padding: 4px; background-color: yellow">4</span>   Fast service in 8-20 minutes</h6>
+
+                        </div>
+                    </div>
+                  </div>
+
+
+
+            </div>
+            </div>
+
+            </div>
+
+
+<div class="jumbotron jumbotron-fluid">
+      <div class="container">
+          <div align="center" style="margin-top: -30px; margin-bottom: 20px">
+            <h3>Request Jump Start Service</h3>
+          </div>
+
+
+
+
+
+
+
+        {#        <h3 style="color: #171717"><span style="color: green">Your Total:</span> You will be charged ${{ bere.total }} only if the requested service was completed</h3>#}
+        {#                <h4 style="color: coral">You can cancel at anytime at no cost</h4>#}
+        {#            {% endif %}#}
+
+                    <form action="{% url 'help:thankyou'%}" method="post">
+                        {% csrf_token %}
+          <div class="form-row">
+            <div class="col-7">
+                        <input type="text" name="manual_address" class="form-control" value="" id="add_manual_address" placeholder="Enter your location" >
+            <small id="emailHelp" class="form-text text-muted">Name of street or complete address</small>
+            </div>
+            <div class="col">
+                        <input type="text" required name="phone" placeholder="Enter your phone number" id="phone" class="form-control">
+            <small id="emailHelp2" class="form-text text-muted">Phone number to contact you</small>
+            </div>
+
+          </div>
+
+                            <button type="submit" class="btn btn-primary"
+                                id="request" style="margin: 5px">GET FREE QUOTE</button>
+        </form>
+
+
+
+        <div class="container">
+          <div class="row">
+            <div class="col">
+                <label for="mesms">
+                                        <img
+                                 src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/jsc_sms-sAsset+1.png"
+                                 alt="tire" style="width: 39px; height: auto; margin-top: 10px">
+                    <br>
+                <a id="mesms" href="sms:+17085489664">Click To Send Text Message</a>
+                    </label>
+            </div>
+            <div class="col">
+                <label for="mephone">
+                                                    <img
+                                 src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/jsc_phooneAsset+1.png"
+                                 alt="tire" style="width: 39px; height: auto; margin-top: 10px">
+                    <br>
+                <a id="mephone" href="tel:+17085489664">Click To Call</a>
+                    </label>
+            </div>
+          </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+{# here #}
+
+<div class="top_margin container" align="center">
+
+
+
+    <div>
+        <hr style="color: yellow; background-color: yellow">
+        <h4>Pricing</h4>
+            <p style="border: 1px solid whitesmoke; border-radius: 5px; background-color: whitesmoke; padding: 5px">We only charge you if the jump start service was successful. No Charge if jump start doesn't work. We are the cheapest car jump service in Chicago and the fastest.</p>
+
+                 <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/jumpstartserviceAsset+1.png" alt="roadside assistance" style="width: 900px; display: block; margin-top: 10px">
+
+   </div>
+
+    <div>
+        <hr style="color: yellow; background-color: yellow">
+        <h4>Payments</h4>
+        <p style="border: 1px solid whitesmoke; border-radius: 5px; background-color: whitesmoke; padding: 5px">We accept all major Credit Cards, Cash or Venmo</p>
+
+                     <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/jsc_pay.png" alt="roadside assistance" style="width: 300px; display: block; margin-top: 10px">
+
+    </div>
+
+        <div>
+            <hr style="color: yellow; background-color: yellow">
+
+            <h4>Explore Our Work</h4>
+
+            <iframe width="500" height="255" src="https://www.youtube.com/embed/XCrkYPijG74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="500" height="255" src="https://www.youtube.com/embed/x7kH376VRGM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
+
+        <div>
+            <hr style="color: yellow; background-color: yellow">
+
+            <h4>How to tell if you need a battery jump start service</h4>
+             <div align="center" style="color: white; margin: 8px; background-color: #a80400">
+                <p>Car won't start or dead battery? You need a battery jump start</p>
+            </div>
+            <div style="color: white; margin: 8px; background-color: black; padding: 10px" align="left">
+
+                <p>1) Your engine cranks (makes a clicking noise), but it doesn't start.</p>
+                <p>2) Your engine doesn't crank (no clicking noise) or start, and the lights don't come on.</p>
+                <p>3) One day it starts fine, then the next day it won't start at all.</p>
+                <p>4) You left the lights on over night.</p>
+                <p>5) It has been 2 or more weeks since you last drove your car.</p>
+                <p>6) Excessive heat or cold weather can weaken your battery. Hot temperatures can be worse
+                    for your car than cold weather.</p>
+            </div>
+        </div>
+
+
+
+{#        <img src="/media/media/Asset_17.png" alt="roadside assistance" class="makebig">#}
+
+
+
+    <div>
+
+        <hr style="color: yellow; background-color: yellow">
+        <h4>TESTIMONIALS</h4>
+
+
+        <div class="sxx">
+
+
+        <div class="containerx">
+          <input type="radio" name="nav" id="first" checked/>
+          <input type="radio" name="nav" id="second" />
+          <input type="radio" name="nav" id="third" />
+
+          <label for="first" class="first cat"></label>
+        <label for="second"  class="second cat"></label>
+        <label for="third" class="third cat"></label>
+
+          <div class="one slidex">
+            <blockquote>
+              <span class="leftq quotes">&ldquo;</span> Great jump start car service if not the best in Chicago IL. Its very cheap and I didn't wait for the jump start like the other time I contacted another company. <span class="rightq quotes">&bdquo; </span>
+            </blockquote>
+            <h2 class="ssx">Tiana Kruger</h2>
+            <h6 class="ssxx">Chicago IL</h6>
+          </div>
+
+          <div class="two slidex">
+            <blockquote>
+              <span class="leftq quotes">&ldquo;</span> My friend needed a car jump start service and I decided to go on Yelp and lookup different places to see how much they charge. I looked on most of the business and found that chicagocarhelp charges the least at $39 for a jump start service. The other business charged $80 or more for the same thing. Their arrival time was less than 20 minutes and overall it was a great service.. <a href="#"> read more</a><span class="rightq quotes">&bdquo; </span>
+            </blockquote>
+            <h2 class="ssx">John Doe</h2>
+            <h6 class="ssxx">Cicero IL</h6>
+          </div>
+
+          <div class="three slidex">
+            <blockquote>
+              <span class="quotes leftq"> &ldquo;</span> After looking around for the cheapest companies for a jump start service in chicago I found this one. They only charged me $39 for the battery jump start. Great service. <span class="rightq quotes">&bdquo; </span>
+            </blockquote>
+            <h2 class="ssx">Lucas Stevenson</h2>
+            <h6 class="ssxx">Chicago IL</h6>
+          </div>
+
+
+        </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div align="center" class="container">
+        <hr style="color: yellow; background-color: yellow">
+
+    <h4>About Us</h4>
+        <p style="border: 1px solid whitesmoke; border-radius: 5px; background-color: whitesmoke; padding: 5px">We Launched Jumpservicechicago in 2018 because its time for an affordable jump start service in
+        Chicago IL. It shouldn't cost you more than $39 dollars for a simple jump start service. We only charge you
+        for the car jump start service if it was completed successfully. We will arrive to you in 20 minutes or less. Major credit cards accepted, cash or Venmo.</p>
+
+                 <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/jsc_logo.png" alt="roadside assistance" style="width: 200px; display: block; margin-top: 10px">
+
+
+
+
+</div>
+
+
+
+    <div align="center">
+        <hr style="color: yellow; background-color: yellow">
+        <h4>Locations In Chicago IL</h4>
+
+
+        <div class="col-lg-12 col-12">
+
+            <div class="row">
+                <div class="col-sm">
+                    <p>60606, 60607, 60608, 60610, 60611, 60612, 60613, 60614, 60616, 60618, 60622, 60623, 60624, 60302, 60402</p>
+
+                </div>
+
+                <div class="col-sm">
+                    <p>60625, 60630, 60638, 60639, 60640, 60641, 60642, 60644, 60647, 60651, 60654, 60657, 60661, 60304, 60804</p>
+                </div>
+
+                <div class="col-sm">
+                    <p><a href="https://goo.gl/maps/Vtxbudw8kgY3RA2T7">Albany Park</a>, <a href="https://goo.gl/maps/xpyAzsKVsaVxWRab6">Ravenswood</a>,
+                        <a href="https://goo.gl/maps/X2Dk8MRrn7VbdTAB6">Uptown</a>, <a href="https://goo.gl/maps/3Ske3qhS6XwPS8vT6">Edgewater</a>,
+                        <a href="https://goo.gl/maps/5JdxbeMvqZgLeaaS6">Irvinpark</a>, <a href="https://goo.gl/maps/DoBrYHv6WCG1Mzwo6">Roscoe Village</a>,
+                        <a href="https://goo.gl/maps/WCXSuHZ33QMYEDAa9">Boystown</a>, <a href="https://goo.gl/maps/JZ3qbkx9ZH6nMY5y9">Lake View</a>,
+                        <a href="https://goo.gl/maps/bXdF3riKpMvJ3qER6">Lincoln Park</a>, <a href="https://goo.gl/maps/A7nJrw4AuZ4M4EA17">Bucktown</a>,
+                        <a href="https://goo.gl/maps/QkTurGm8oYVdrSnw8">Logan Square</a>, <a href="https://goo.gl/maps/DthJrcoLmoV7pmV7A">Wicker Park</a>,
+                        <a href="https://goo.gl/maps/HERFg1aGmrQ3vYvaA">Hermosa</a>, <a href="https://goo.gl/maps/Wy5vjWV1jDToPiNv6">Humbold Park</a>,
+                        <a href="https://goo.gl/maps/MNjBg1ekR9yh8rH5A">Ukrainian Village</a>, <a href="https://goo.gl/maps/wYAipt91MFqMcDEH7">Near North side</a>,
+                        <a href="https://goo.gl/maps/36yPPpNETQESxXaW7">River North</a>, <a href="https://goo.gl/maps/GEnthGTtZEnZhSmF6">River West</a>,
+                        <a href="https://goo.gl/maps/SwmLyu4jb5QVdW2V6">Near West Side</a>, <a href="https://goo.gl/maps/bK7HwDtWybGvDkMy5">South Loop</a>,
+                        <a href="https://goo.gl/maps/i4HY7L2sGtbJAQjS6">Chinatown</a>, <a href="https://goo.gl/maps/q3bNHupUmQ8GtRzY9">Downtown</a>,
+                        <a href="https://goo.gl/maps/xZzjVuiTjpzrAyvd9">Homan Square</a>, <a href="https://goo.gl/maps/zjDdwDyhci1dbug58">Little Italy</a>,
+                        <a href="https://goo.gl/maps/qx26daJTC3tPcXBv5">Chicago</a>, <a href="https://goo.gl/maps/woi6ADUg7N9E4rp88">Cook County</a>
+                    </p>
+
+                </div>
+            </div>
+
+         </div>
+    </div>
+
+        <div align="center" style="margin: 10px">
+            <hr style="color: yellow; background-color: yellow">
+            <h4>Car Battery Info</h4>
+            <div>
+                <h6 align="left">Battery Life</h6>
+                <p style="border: 1px solid whitesmoke; border-radius: 5px; background-color: whitesmoke; padding: 5px">The typical car battery lasts 3 to 5 years, depending on the type of climate you live in.
+                    If you live in an area that experiences extreme heat or cold, your battery might not make
+                    it to its third birthday. If you mostly use your car for short trips (an average run time
+                    of less than 20 minutes), your battery may not have a long life because your alternator
+                    rarely gets the opportunity to fully recharge it.</p>
+            </div>
+
+            <div>
+                <h6 align="left">Why Car Batteries Fail</h6>
+                <p style="border: 1px solid whitesmoke; border-radius: 5px; background-color: whitesmoke; padding: 5px">Extreme heat or cold can increase your battery's rate of discharge, making winter a
+                    triple-threat to your battery. All that exposure to summer's heat evaporates the water
+                    in the electrolyte, increasing sulfation. Then winter rolls around, and freezing
+                    temperatures slow the chemical reactions occurring inside a lead acid battery, further
+                    reducing your battery's ability to perform. At the same time, a cold engine and sluggish
+                    oil demand more power, while power-hungry features like heat and defrost place more
+                    demand on your battery. Although lead acid batteries last an average of four years,
+                    they can fail earlier under the right (or wrong) conditions.</p>
+            </div>
+
+            <div>
+                <h6 align="left">Functions Of A Car Battery</h6>
+                <p style="border: 1px solid whitesmoke; border-radius: 5px; background-color: whitesmoke; padding: 5px">A car battery is the most crucial piece of equipment to starting and driving your vehicle.
+                    It sends power from the starter motor to the sparks plugs, igniting your car’s fuel,
+                    while also giving other systems power. This includes lights, radio, air conditioning,
+                    and more. You may be able to tell when your car battery starts to die if you find it
+                    difficult to start, have flickering lights, or a weakening alarm system</p>
+            </div>
+
+        </div>
+
+
+    <div align="center">
+        <hr style="color: yellow; background-color: yellow">
+
+        <h4>How To Jump Start A Car Battery</h4>
+
+        <div>
+            <h6>1. Locate The Battery</h6>
+
+              <div class="row justify-content-center">
+                <div class="col-4">
+                    <p style="border: 1px solid whitesmoke; border-radius: 5px; background-color: whitesmoke; padding: 5px">In many cars, the battery sits in the engine compartment under the hood. However, it
+                        may also be located in the trunk or under the rear seat of your car. In the case of a battery that’s been
+                        dead for a long time, it’s best to call professional jump start service provider due to the added risk of complications.
+                    </p>
+
+                </div>
+                <div class="col-4">
+                    <img src="https://jumpservicechicago.s3.us-east-2.amazonaws.com/car-battery-jump-start-service.jpg" alt="jump start service Chicago IL" style="width: 450px">
+
+                </div>
+              </div>
+
+        </div>
+
+        <div>
+            <h6>2. Connect The Jumper Cables</h6>
+
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <p style="border: 1px solid whitesmoke; border-radius: 5px; background-color: whitesmoke; padding: 5px">
+                    Identify the positive(+) terminal or connection point under the hood. Clip one of the positive red clamps to
+                    the positive terminal.Next connect the other red clamp to the positive terminal of
+                    the car providing the jump, followed by the negative black clamp to the negative
+                    terminal of the car providing the jump. Ensure a grounded connection and
+                    avoid damaging the battery, attach the final negative clamp to a sizable metallic component of the engine.
+                    </p>
+
+                </div>
+                <div class="col-4">
+                    <img src="https://jumpservicechicago.s3.us-east-2.amazonaws.com/jumper-cables-jump-start-service.jpg" alt="jump start service Chicago IL" style="width: 450px">
+
+                </div>
+            </div>
+
+        </div>
+
+        <div>
+            <h6>3. Try Starting The Car</h6>
+
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <p style="border: 1px solid whitesmoke; border-radius: 5px; background-color: whitesmoke; padding: 5px">
+                        Attempt to start the car with the dead battery. The car may crank slowly, but the goal is to
+                        get the engine to start. If the car does not start, check all your
+                        connections, adjusting the clamps as needed to ensure full contact, and restart the engine
+                        of the car providing the jump. If the car still does not start, leave the cables connected and let the running vehicle charge the dead battery
+                        for 5 to 10 minutes before trying to start the dead car again. It’s a good idea to keep the battery in use
+                        for 30 minutes before turning off the engine in order to ensure the charge holds.
+                    </p>
+
+                </div>
+                <div class="col-4">
+                    <img src="https://jumpservicechicago.s3.us-east-2.amazonaws.com/car-jump-start-service.jpg" alt="jump start service Chicago IL" style="width: 450px">
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
         <div align="center">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d380513.71601800894!2d-88.01234150586738!3d41.83339249957157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e33ad94b2b981%3A0x226556739ebfc1f3!2sChicagocarhelp!5e0!3m2!1sen!2sus!4v1566764274203!5m2!1sen!2sus" width="340" height="240" frameborder="0" style="border:0; margin-top: 5px" allowfullscreen></iframe>
-</div>
+            <hr style="color: yellow; background-color: yellow">
+
+                                <h4>Contact Us</h4>
 
 
-                <div style="margin-bottom: 10px;margin-top: 50px; border: 1px solid black; padding: 5px">
-            <div class="top_margin2">
-            <h3 class="put_left" style="color: #00691d">Fast Jump Start Service in Chicago</h3>
-            <p>You don't have to call you only need to click a button and in a
-                few minutes you will receive a message to let you know when help will arrive to jump start your car.</p>
-            </div>
-            <div class="top_margin2">
-            <h3 class="put_left" style="color: #00691d">Best Jump Start Service Near You</h3>
-            <p>We mainly operate in Chicago so you can be sure you will get help to jump start your car in minutes.</p>
-            </div>
-            <div class="top_margin2">
-            <h3 class="put_left" style="color: #00691d">The Cheapest Jump Start Service</h3>
-            <p>We only charge $39 to jump start your car. Other guys charge you over $70 to do the same job.</p>
-            </div>
-            <div class="top_margin2">
-            <h3 class="put_left" style="color: #00691d">Where are we available?</h3>
-            <p>Reliable emergency roadside assistance for car lockout, jump starts, out of gas and tire changes. We operate in Chicago, Cicero and Berwyn. </p>
-            </div>
+            <div align="center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d380513.71601800894!2d-88.01234150586738!3d41.83339249957157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e33ad94b2b981%3A0x226556739ebfc1f3!2sChicagocarhelp!5e0!3m2!1sen!2sus!4v1566764274203!5m2!1sen!2sus" width="500" height="400" frameborder="0" style="border:0; margin-top: 5px" allowfullscreen></iframe>
             </div>
 
-<div class="top_margin">
-    <h4 style="color: black">How did this happen?</h4>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h5>Contact</h5>
 
-    <p>You're late for work and rush out to your car, only to find that it won't start.
-        The headlights are dim and the engine simply refuses to turn over.
-        You realize that your battery is dead. How did this happen?</p>
-</div>
-
-<div class="purple_shadow_two">
-<h5>Headlights or dome lights left on​​​.</h5>
-<p>Headlights, or even a very dim dome light, will drain a battery dead overnight.</p>
-<p>Make sure to check for any interior lights when it's dark outside.</p>
-<p>Some headlights are designed to remain on for a while, but a malfunctioning system may leave them on permanently.</p>
-</div>
-
-
-<div class="purple_shadow_two">
-<h5>Battery in weak or poor condition.</h5>
-<p>A poorly maintained or weak battery may not hold a charge very well.</p>
-<p>Even small drains, like the memory function in your car radio, may kill a very weak battery.</p>
-</div>
-
-
-
-<div class="purple_shadow_two">
-<h5>Corroded or loose battery connections.</h5>
-<p>​Corroded battery connections can prevent the charging system from topping off your battery when you are driving.</p>
-<p>Loose battery connections can also cause problems.</p>
-</div>
-
-
-<div class="purple_shadow_two">
-<h5>Extremely hot or cold temperatures.</h5>
-<p>​​Hot or cold weather won't kill a battery that's new or in good shape, but a weak or old battery may fail in extreme conditions.</p>
-<p>Extremely hot or cold weather can also magnify other underlying issues.</p>
-</div>
-
-
-<div style="margin-bottom: 10px;margin-top: 50px; border: 1px solid black; padding: 5px">
-    <h6>About</h6>
-
-<p>Chicagocarhelp was created because of the high prices for a jump start service in chicago. We feel that it shouldn't cost $75
-    or $100 dollars for a simple jump start service in chicago. That won't be a problem anymore because chicagocarhelp only charges
-    $39 dollars for a jump start and nothing more. The cheapest option available in chicago and suburbs and we arrive in 8 to 20 minutes. You only pay if the services was completed
-    successfully and the car was able to start. Next time you need a jump start service near you go to www.chicagocarhelp.com. Its fast and cheap. We have helped thousands of people with a
-    jump start. Chicagocarhelp has a five start rating.</p>
-
-
-</div>
-
-<div class="purple_shadow">
-    <h6>More info</h6>
-                                                                   <a href="https://m.facebook.com/jumpstartcar">
-                                    <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/facebook.png" alt="Free jump start service" style="margin-right: 5px; width: 40px; height: auto">
-</a>
-
-                                <a href="https://youtu.be/KSVwtD1qUG0">
-                                    <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/youtube.png" alt="Free jump start service" style="margin-right: 5px; width: 40px; height: auto">
-</a>
-
-                                <a href="https://g.page/chicagocarhelp">
-                                    <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/google.png" alt="Free jump start service" style="margin-right: 5px; width: 40px; height: auto">
-</a>
-                                <a href="https://www.yelp.com/biz/chicagocarhelp-cicero-3">
-                                    <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/Yelp.png" alt="Free jump start service" style="margin-right: 5px; width: 40px; height: auto">
-</a>
-
-                                    <a href="https://www.linkedin.com/company/chicagocarhelp">
-                                    <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/linkedin.png" alt="Free jump start service" style="margin-right: 5px; width: 40px; height: auto">
-</a>
-
-                                    <a href="http://chicagocarhelp.tumblr.com">
-                                    <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/tumblr.png" alt="Free jump start service" style="margin-right: 5px; width: 40px; height: auto">
-</a>
+            <h5>Jump Start Service Chicago - Chicagocarhelp</h5>
+            <h6>Car Service</h6>
+            <h6>Towing Service</h6>
+            <h6>Chicago, IL, US</h6>
+                    <a href="tel:+17085489664"><button class="btn btn-success btn-lg">CALL NOW</button></a>
+                    <p>708-548-9664</p>
+                </div>
+                <div class="col">
+                  <h5>Business Hours</h5>
+                    <p>
+                        Mon:	8:00 AM – 12:00 PM
                                     <br>
+                        Tue:	8:00 AM – 12:00 PM
+                                    <br>
+                        Wed:	8:00 AM – 12:00 PM
+                                    <br>
+                        Thu:	8:00 AM – 12:00 PM
+                                    <br>
+                        Fri:	8:00 AM – 12:00 PM
+                                    <br>
+                        Sat:	8:00 AM – 7:00 PM
+                                    <br>
+                        Sun:	8:00 AM – 7:00 PM
+                    </p>
+                </div>
+              </div>
+            </div>
 
-    <a href="https://www.dummies.com/home-garden/car-repair/how-to-jump-start-a-car/">How to jump start your car</a><br>
-    <a href="https://www.goodhousekeeping.com/institute/a22833/how-to-use-jumper-cables/">How to user jumper cables</a><br>
-    <a href="http://jumpstarterexpert.com/how-to-use-a-portable-jump-starter/">How to use a jump starter</a>
-</div>
-
-</div>
+        </div>
 
 
+
+    <div align="center" style="margin: 10px">
+        <hr style="color: yellow; background-color: yellow">
+
+        <h4>Social</h4>
+
+                <a href="https://m.facebook.com/jumpstartcar">
+                    <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/facebook.png" alt="Free jump start service" style="margin-right: 5px; width: 35px; height: auto">
+                </a>
+
+                    <a href="https://youtu.be/KSVwtD1qUG0">
+                    <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/youtube.png" alt="Free jump start service" style="margin-right: 5px; width: 35px; height: auto">
+                </a>
+
+                    <a href="https://g.page/chicagocarhelp">
+                    <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/google.png" alt="Free jump start service" style="margin-right: 5px; width: 35px; height: auto">
+                </a>
+                    <a href="https://www.yelp.com/biz/chicagocarhelp-cicero-3">
+                    <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/Yelp.png" alt="Free jump start service" style="margin-right: 5px; width: 35px; height: auto">
+                </a>
+
+                    <a href="https://www.linkedin.com/company/chicagocarhelp">
+                    <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/linkedin.png" alt="Free jump start service" style="margin-right: 5px; width: 35px; height: auto">
+                </a>
+
+                    <a href="http://chicagocarhelp.tumblr.com">
+                    <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/tumblr.png" alt="Free jump start service" style="margin-right: 5px; width: 35px; height: auto">
+                </a>
+
+
+
+    </div>
+
+    <div align="center">
+        <footer>
+            <small>Copyright&copy; 2019, Jumpservicechicago. All Rights Reserved</small>
+        </footer>
+    </div>
 {% endblock %}
