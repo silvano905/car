@@ -116,6 +116,7 @@ img{
 
 @media screen and (min-width: 700px){
         .maxx{
+            color: red;
     }
 
     .mainss{
@@ -180,6 +181,7 @@ img{
 
 @media screen and (max-width: 600px){
     .maxx{
+        color: red;
         font-size: 15px;
     }
     .mainss{
