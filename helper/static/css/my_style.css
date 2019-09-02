@@ -112,6 +112,37 @@ img{
 }
 
 @media screen and (min-width: 700px){
+    blockquote:after {
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 100%;
+  border: solid transparent;
+  border-top-color: #DA532B;
+  border-left-color:#DA532B;
+  border-width: 10px;
+  left: 10%;
+}
+#second:checked ~ .two blockquote {
+  background-color:purple;
+}
+.two blockquote:after{
+  border: solid transparent;
+  border-top-color: purple;
+  border-left-color:purple;
+  border-width: 10px;
+}
+#third:checked ~ .three blockquote{
+  background-color:#54885F;
+}
+.three blockquote:after{
+  border: solid transparent;
+  border-top-color: #54885F;
+  border-left-color: #54885F;
+  border-width: 10px;
+}
+
     blockquote{
   margin:0;
   padding:30px;
@@ -167,6 +198,36 @@ img{
 }
 
 @media screen and (max-width: 600px){
+    blockquote:after {
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 100%;
+  border: solid transparent;
+  border-top-color: #DA532B;
+  border-left-color:#DA532B;
+  border-width: 10px;
+  left: 10%;
+}
+#second:checked ~ .two blockquote {
+  background-color:purple;
+}
+.two blockquote:after{
+  border: solid transparent;
+  border-top-color: purple;
+  border-left-color:purple;
+  border-width: 10px;
+}
+#third:checked ~ .three blockquote{
+  background-color:#54885F;
+}
+.three blockquote:after{
+  border: solid transparent;
+  border-top-color: #54885F;
+  border-left-color: #54885F;
+  border-width: 10px;
+}
 
     .containerx{
   width:300px;
@@ -329,38 +390,6 @@ overflow: hidden;
   left:68%;
 }
 
-
-
-blockquote:after {
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  top: 100%;
-  border: solid transparent;
-  border-top-color: #DA532B;
-  border-left-color:#DA532B;
-  border-width: 10px;
-  left: 10%;
-}
-#second:checked ~ .two blockquote {
-  background-color:purple;
-}
-.two blockquote:after{
-  border: solid transparent;
-  border-top-color: purple;
-  border-left-color:purple;
-  border-width: 10px;
-}
-#third:checked ~ .three blockquote{
-  background-color:#54885F;
-}
-.three blockquote:after{
-  border: solid transparent;
-  border-top-color: #54885F;
-  border-left-color: #54885F;
-  border-width: 10px;
-}
 .quotes{
   position:absolute;
   color:rgba(255,255,255,0.5);
