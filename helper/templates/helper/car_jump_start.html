@@ -55,12 +55,12 @@
 
                 <div class="container">
                   <div class="row">
-                    <div class="col">
+                    <div class="col-lg-6 col-12">
                         <div class="alert alert-success" role="alert">
                             <h6><span style="border: 1px solid white; border-radius: 10%; padding: 4px; background-color: yellow">1</span>   Car won't start</h6>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-lg-6 col-12">
                         <div class="alert alert-success" role="alert">
                             <h6><span style="border: 1px solid white; border-radius: 10%; padding: 4px; background-color: yellow">2</span>   Dead car battery</h6>
 
@@ -70,14 +70,14 @@
 
                 <div class="container">
                   <div class="row">
-                    <div class="col">
+                    <div class="col-lg-6 col-12">
 
                         <div class="alert alert-success" role="alert">
                             <h6><span style="border: 1px solid white; border-radius: 10%; padding: 4px; background-color: yellow">3</span>  Weak car battery</h6>
 
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-lg-6 col-12">
 
                         <div class="alert alert-success" role="alert">
                              <h6><span style="border: 1px solid white; border-radius: 10%; padding: 4px; background-color: yellow">4</span>   Fast service in 8-20 minutes</h6>
@@ -113,11 +113,11 @@
                     <form action="{% url 'help:thankyou'%}" method="post">
                         {% csrf_token %}
           <div class="form-row">
-            <div class="col-7">
+            <div class="col-lg-6 col-12">
                         <input type="text" name="manual_address" class="form-control" value="" id="add_manual_address" placeholder="Enter your location" >
             <small id="emailHelp" class="form-text text-muted">Name of street or complete address</small>
             </div>
-            <div class="col">
+            <div class="col-lg-6 col-12">
                         <input type="text" required name="phone" placeholder="Enter your phone number" id="phone" class="form-control">
             <small id="emailHelp2" class="form-text text-muted">Phone number to contact you</small>
             </div>
@@ -132,7 +132,7 @@
 
         <div class="container">
           <div class="row">
-            <div class="col">
+            <div class="col-lg-6 col-12">
                 <label for="mesms">
                                         <img
                                  src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/jsc_sms-sAsset+1.png"
@@ -141,7 +141,7 @@
                 <a id="mesms" href="sms:+17085489664">Click To Send Text Message</a>
                     </label>
             </div>
-            <div class="col">
+            <div class="col-lg-6 col-12">
                 <label for="mephone">
                                                     <img
                                  src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/jsc_phooneAsset+1.png"
@@ -373,14 +373,14 @@
             <h6>1. Locate The Battery</h6>
 
               <div class="row justify-content-center">
-                <div class="col-4">
+                <div class="col-lg-6 col-12">
                     <p style="border: 1px solid whitesmoke; border-radius: 5px; background-color: whitesmoke; padding: 5px">In many cars, the battery sits in the engine compartment under the hood. However, it
                         may also be located in the trunk or under the rear seat of your car. In the case of a battery that’s been
                         dead for a long time, it’s best to call professional jump start service provider due to the added risk of complications.
                     </p>
 
                 </div>
-                <div class="col-4">
+                <div class="col-lg-6 col-12">
                     <img src="https://jumpservicechicago.s3.us-east-2.amazonaws.com/car-battery-jump-start-service.jpg" alt="jump start service Chicago IL" style="width: 450px">
 
                 </div>
@@ -392,7 +392,7 @@
             <h6>2. Connect The Jumper Cables</h6>
 
             <div class="row justify-content-center">
-                <div class="col-4">
+                <div class="col-lg-6 col-12">
                     <p style="border: 1px solid whitesmoke; border-radius: 5px; background-color: whitesmoke; padding: 5px">
                     Identify the positive(+) terminal or connection point under the hood. Clip one of the positive red clamps to
                     the positive terminal.Next connect the other red clamp to the positive terminal of
@@ -402,7 +402,7 @@
                     </p>
 
                 </div>
-                <div class="col-4">
+                <div class="col-lg-6 col-12">
                     <img src="https://jumpservicechicago.s3.us-east-2.amazonaws.com/jumper-cables-jump-start-service.jpg" alt="jump start service Chicago IL" style="width: 450px">
 
                 </div>
@@ -414,7 +414,7 @@
             <h6>3. Try Starting The Car</h6>
 
             <div class="row justify-content-center">
-                <div class="col-4">
+                <div class="col-lg-6 col-12">
                     <p style="border: 1px solid whitesmoke; border-radius: 5px; background-color: whitesmoke; padding: 5px">
                         Attempt to start the car with the dead battery. The car may crank slowly, but the goal is to
                         get the engine to start. If the car does not start, check all your
@@ -425,7 +425,7 @@
                     </p>
 
                 </div>
-                <div class="col-4">
+                <div class="col-lg-6 col-12">
                     <img src="https://jumpservicechicago.s3.us-east-2.amazonaws.com/car-jump-start-service.jpg" alt="jump start service Chicago IL" style="width: 450px">
 
                 </div>
