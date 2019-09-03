@@ -21,7 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('berenisesilvano/', admin.site.urls),
+    path('morelia/', admin.site.urls),
     path('', include('helper.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
