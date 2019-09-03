@@ -117,8 +117,8 @@ img{
 }
 
 @media screen and (min-width: 700px){
-    .car_no_start_img{
-        width: 50px;
+    .carx{
+        width: 300px;
         height: auto;
     }
 
@@ -191,8 +191,8 @@ img{
 }
 
 @media screen and (max-width: 600px){
-    .car_no_start_img{
-        width: 90px;
+    .carx{
+        width: 100px;
         height: auto;
     }
 
