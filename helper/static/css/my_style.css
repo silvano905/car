@@ -120,6 +120,7 @@ img{
     .product_img{
         width: 300px;
         height: auto;
+        margin-bottom: 20px;
     }
 
     .table_img{
@@ -190,6 +191,7 @@ img{
     .product_img{
         width: 150px;
         height: auto;
+        margin-bottom: 15px;
     }
 
     .table_img{
