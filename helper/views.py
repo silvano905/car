@@ -191,20 +191,16 @@ def site_map(request):
     return render(request, 'helper/sitemap.xml', content_type='text/xml')
 
 
-def about(request):
-    return render(request, 'helper/about.html')
-
-
 def car_unlock(request):
     return render(request, 'helper/car_unlock.html')
 
 
-def fuel_delivery(request):
-    return render(request, 'helper/out_of_gas.html')
-
-
 def battery_jump_start(request):
     return render(request, 'helper/car_jump_start.html')
+
+
+def jump_service_spanish(request):
+    return render(request, 'helper/spanish.html')
 
 
 

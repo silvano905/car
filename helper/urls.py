@@ -8,10 +8,9 @@ app_name = 'help'
 
 urlpatterns = [
     path('', views.add_auto,  name='home'),
-    path('fuel-delivery/', views.fuel_delivery, name='fuel_delivery'),
     path('car-unlock-service/', views.car_unlock, name='unlock_car'),
     path('jump-start-car/', views.battery_jump_start, name='jump_start'),
-    path('about/', views.about, name='about'),
+    path('Pasar-Cables-Chicago-IL/', views.jump_service_spanish, name='spanish'),
     path('undo/', views.undo_all, name='undo'),
     path('add/',views.add_indi, name='add'),
     path('thankyou/', views.request_services, name='thankyou'),
