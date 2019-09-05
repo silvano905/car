@@ -1,71 +1,264 @@
 <!DOCTYPE html>
 {% extends 'helper/home.html' %}
 
+
+
 {% block body_block %}
 
-    <div class="bottom_margin container" align="center">
+        <div class="carousel_img">
 
-                            <div style="position: relative; text-align: center; color: white">
-                            <div style="margin-top: 5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                                <p class="pic_background make_big_two">CAR UNLOCK SERVICE</p>
-                                <p class="pic_background make_big_two">Locked out? Keys left in the car?We can get you the help you need in minutes.</p>
-
-                            </div>
-                        <img style="width: 100%"
-                             src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/jumpstart_unlock.jpg" alt="car lockout">
-                        </div>
-        <div class="top_margin bottom_margin">
-            <a href="{% url 'help:home'%}"><button class="btn btn-primary btn-sm" style="margin-bottom: 2px">Need fuel delivery?</button></a>
-            <a href="{% url 'help:home'%}"><button class="btn btn-primary btn-sm" style="margin-bottom: 2px">Need a jump start?</button></a>
-            <a href="{% url 'help:home'%}"><button class="btn btn-primary btn-sm" style="margin-bottom: 2px">Unlock car door?</button></a>
-        </div>
-
-    <p class="make_big"> Just click the blue button and within
-        minutes you will receive a text from us to let you know when
-        we will arrive to unlock your car. You don't have to call or enter your address manually.</p>
-        <div align="center">
-            <a href="{% url 'help:home'%}"><button class="btn btn-primary">GET HELP NOW</button></a>
-        </div>
-
-        <div style="margin-bottom: 10px;margin-top: 50px; border: 1px solid black; padding: 5px">
-            <div class="top_margin2">
-            <p class="put_left" style="color: #571746">NO CALL REQUIRED</p>
-            <p>You don't have to call you only need to click a button and in a
-                few minutes you will receive a message to let you know when help will arrive to unlock your car.</p>
-            </div>
-            <div class="top_margin2">
-            <p class="put_left" style="color: #571746">GET THE BEST CAR UNLOCK SERVICE HELP NEAR YOU FAST</p>
-            <p>We mainly operate in Chicago so you can be sure you will get your car unlocked in minutes.</p>
-            </div>
-            <div class="top_margin2">
-            <p class="put_left" style="color: #571746">THE CHEAPEST ROADSIDE ASSISTANCE</p>
-            <p>We only charge $39 for car unlock. Other guys charge you over $75 to do the same job.</p>
-            </div>
-            <div class="top_margin2">
-            <p class="put_left" style="color: #571746">Where are we available?</p>
-            <p>reliable emergency roadside assistance for car lockout, jump starts, out of gas and tire changes. We operate in Chicago, Cicero and Berwyn. </p>
-            </div>
-        </div>
-
-
-    <h4 class="top_margin" style="color: #571746">What to do if you forgot your keys inside of your car.</h4>
-
-<div class="purple_shadow_two">
-<h5>Do-It-Yourself Methods</h5>
-<p>Go to Youtube and search how to unlock a car. Follow the instructions carefully without damaging anything.</p>
-</div>
-
-
-
-
-    <div class="purple_shadow">
-        <h6>More info</h6>
-        <a href="https://lifehacker.com/5848743/break-into-your-car-the-safe-and-easy-way">How to unlock your own car</a><br>
-        <a href="http://blogs.iu.edu/marketingandmore/2018/08/14/5-auto-lockout-tips/">5 auto lockout tips</a><br>
-        <a href="https://www.doityourself.com/stry/how-to-pick-manual-car-door-locks">How to pick a car</a>
+ <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="" src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/testiing36Asset+3.png" alt="First slide">
+        <div class="carousel-caption">
+    <h1 class="mainx">CAR LOCKOUT SERVICE CHICAGO IL</h1>
+    <h2 class="mainx">$39 Unlock Car Service</h2>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="" src="https://jumpservicechicago.s3.us-east-2.amazonaws.com/testiing40Asset+3.png" alt="Second slide">
+        <div class="carousel-caption">
+    <h1 class="mainx">UNLOCK CAR DOOR SERVICE CHICAGO IL</h1>
+    <h4 class="mainx">call now</h4>
+  </div>
     </div>
 
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 
 
+    <div align="center" class="container">
+                <div class="alert alert-success" role="alert">
+        <h1 class="main">$39 For Car Lockout Service In Chicago IL</h1>
+        </div>
+
+        <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+          <div align="center" style="margin-top: -30px; margin-bottom: 20px">
+            <h3 class="main">Request Car Lockout Service</h3>
+          </div>
+
+
+
+
+
+
+
+        {#        <h3 style="color: #171717"><span style="color: green">Your Total:</span> You will be charged ${{ bere.total }} only if the requested service was completed</h3>#}
+        {#                <h4 style="color: coral">You can cancel at anytime at no cost</h4>#}
+        {#            {% endif %}#}
+
+                    <form action="{% url 'help:thankyou'%}" method="post">
+                        {% csrf_token %}
+          <div class="form-row">
+            <div class="col-lg-6 col-12">
+                        <input type="text" name="manual_address" class="form-control" value="" id="add_manual_address" placeholder="Enter your location" >
+            <small id="emailHelp" class="form-text text-muted">Name of street or complete address</small>
+            </div>
+            <div class="col-lg-6 col-12">
+                        <input type="text" required name="phone" placeholder="Enter your phone number" id="phone" class="form-control">
+            <small id="emailHelp2" class="form-text text-muted">Phone number to contact you</small>
+            </div>
+
+          </div>
+
+                            <button type="submit" class="btn btn-primary"
+                                id="request" style="margin: 5px">GET FREE QUOTE</button>
+        </form>
+
+
+
+        <div align="center" style="margin-top: 10px">
+                        <small style="color: crimson">Please use the form above for better service</small>
+
+          <div class="row" style="margin-bottom: -30px">
+            <div class="col-lg-6 col-6">
+                    <a  id="mesms" href="sms:+17085489664"><img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/jsc_sms-sAsset+1.png" alt="tire" style="width: 39px; height: auto; margin-top: 10px"></a>
+                <p>Send Text Message</p>
+                    <br>
+
+            </div>
+            <div class="col-lg-6 col-6">
+                    <a id="mephone" href="tel:+17085489664"><img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/jsc_phooneAsset+1.png" alt="tire" style="width: 39px; height: auto; margin-top: 10px"></a>
+                <p>Call</p>
+                    <br>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+</div>
+    </div>
+
+
+    <div align="center">
+        <hr style="color: yellow; background-color: yellow">
+        <h4>Payments</h4>
+        <p style="border: 1px solid whitesmoke; border-radius: 5px; background-color: whitesmoke; padding: 5px">We accept all major Credit Cards, Cash or Venmo</p>
+
+                     <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/jsc_pay.png" alt="roadside assistance" style="width: 300px; display: block; margin-top: 10px">
+
+    </div>
+
+
+<div align="center" class="container">
+        <hr style="color: yellow; background-color: yellow">
+
+    <h4>About Us</h4>
+        <p style="border: 1px solid whitesmoke; border-radius: 5px; background-color: whitesmoke; padding: 5px">We Launched <strong>Jump Start Service Chicago - Chicagocarhelp</strong> in 2018 because its time for an affordable car lockout service in
+        Chicago IL. It shouldn't cost you more than $39 dollars for a simple car lockout service. We only charge you
+        for the car lockout service if it was completed successfully. We will arrive to you in 20 minutes or less. Major credit cards accepted, cash or Venmo.</p>
+
+                 <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/chicagocarhelp_logo_jump_start_service.png" alt="roadside assistance" style="width: 200px; display: block; margin-top: 10px">
+
+
+
+
+</div>
+
+
+    <div align="center" class="container">
+        <hr style="color: yellow; background-color: yellow">
+        <h4>Locations In Chicago IL</h4>
+
+
+        <div class="col-lg-12 col-12">
+
+            <div class="row">
+                <div class="col-sm">
+                    <p>60606, 60607, 60608, 60610, 60611, 60612, 60613, 60614, 60616, 60618, 60622, 60623, 60624, 60302, 60402</p>
+
+                </div>
+
+                <div class="col-sm">
+                    <p>60625, 60630, 60638, 60639, 60640, 60641, 60642, 60644, 60647, 60651, 60654, 60657, 60661, 60304, 60804</p>
+                </div>
+
+                <div class="col-sm">
+                    <p><a href="https://goo.gl/maps/Vtxbudw8kgY3RA2T7">Albany Park</a>, <a href="https://goo.gl/maps/xpyAzsKVsaVxWRab6">Ravenswood</a>,
+                        <a href="https://goo.gl/maps/X2Dk8MRrn7VbdTAB6">Uptown</a>, <a href="https://goo.gl/maps/3Ske3qhS6XwPS8vT6">Edgewater</a>,
+                        <a href="https://goo.gl/maps/5JdxbeMvqZgLeaaS6">Irvinpark</a>, <a href="https://goo.gl/maps/DoBrYHv6WCG1Mzwo6">Roscoe Village</a>,
+                        <a href="https://goo.gl/maps/WCXSuHZ33QMYEDAa9">Boystown</a>, <a href="https://goo.gl/maps/JZ3qbkx9ZH6nMY5y9">Lake View</a>,
+                        <a href="https://goo.gl/maps/bXdF3riKpMvJ3qER6">Lincoln Park</a>, <a href="https://goo.gl/maps/A7nJrw4AuZ4M4EA17">Bucktown</a>,
+                        <a href="https://goo.gl/maps/QkTurGm8oYVdrSnw8">Logan Square</a>, <a href="https://goo.gl/maps/DthJrcoLmoV7pmV7A">Wicker Park</a>,
+                        <a href="https://goo.gl/maps/HERFg1aGmrQ3vYvaA">Hermosa</a>, <a href="https://goo.gl/maps/Wy5vjWV1jDToPiNv6">Humbold Park</a>,
+                        <a href="https://goo.gl/maps/MNjBg1ekR9yh8rH5A">Ukrainian Village</a>, <a href="https://goo.gl/maps/wYAipt91MFqMcDEH7">Near North side</a>,
+                        <a href="https://goo.gl/maps/36yPPpNETQESxXaW7">River North</a>, <a href="https://goo.gl/maps/GEnthGTtZEnZhSmF6">River West</a>,
+                        <a href="https://goo.gl/maps/SwmLyu4jb5QVdW2V6">Near West Side</a>, <a href="https://goo.gl/maps/bK7HwDtWybGvDkMy5">South Loop</a>,
+                        <a href="https://goo.gl/maps/i4HY7L2sGtbJAQjS6">Chinatown</a>, <a href="https://goo.gl/maps/q3bNHupUmQ8GtRzY9">Downtown</a>,
+                        <a href="https://goo.gl/maps/xZzjVuiTjpzrAyvd9">Homan Square</a>, <a href="https://goo.gl/maps/zjDdwDyhci1dbug58">Little Italy</a>,
+                        <a href="https://goo.gl/maps/qx26daJTC3tPcXBv5">Chicago</a>, <a href="https://goo.gl/maps/woi6ADUg7N9E4rp88">Cook County</a>
+                    </p>
+
+                </div>
+            </div>
+
+         </div>
+    </div>
+
+
+        <div align="center">
+            <hr style="color: yellow; background-color: yellow">
+
+                                <h4>Contact Us</h4>
+
+
+            <div align="center">
+                <iframe class="jumpservice_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d380513.71601800894!2d-88.01234150586738!3d41.83339249957157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e33ad94b2b981%3A0x226556739ebfc1f3!2sChicagocarhelp!5e0!3m2!1sen!2sus!4v1566764274203!5m2!1sen!2sus" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h5>Contact</h5>
+
+            <h6>Jump Start Service Chicago - Chicagocarhelp</h6>
+            <h6>Car Service</h6>
+            <h6>Towing Service</h6>
+            <h6>Chicago, IL, US</h6>
+                    <a href="tel:+17085489664"><button class="btn btn-success btn-lg">CALL NOW</button></a>
+                    <p>708-548-9664</p>
+                </div>
+                <div class="col">
+                  <h5>Business Hours</h5>
+                    <p>
+                        Mon:	8:00 AM – 12:00 PM
+                                    <br>
+                        Tue:	8:00 AM – 12:00 PM
+                                    <br>
+                        Wed:	8:00 AM – 12:00 PM
+                                    <br>
+                        Thu:	8:00 AM – 12:00 PM
+                                    <br>
+                        Fri:	8:00 AM – 12:00 PM
+                                    <br>
+                        Sat:	8:00 AM – 7:00 PM
+                                    <br>
+                        Sun:	8:00 AM – 7:00 PM
+                    </p>
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+
+    <div align="center" style="margin: 10px">
+        <hr style="color: yellow; background-color: yellow">
+
+        <h4>Social</h4>
+
+                <a href="https://m.facebook.com/jumpstartcar">
+                    <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/facebook.png" alt="Free jump start service" style="margin-right: 5px; width: 35px; height: auto">
+                </a>
+
+                    <a href="https://www.youtube.com/channel/UC8bYCR_hyh9ZalXqpt5GASg?view_as=subscriber">
+                    <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/youtube.png" alt="Free jump start service" style="margin-right: 5px; width: 35px; height: auto">
+                </a>
+
+                    <a href="https://g.page/chicagocarhelp">
+                    <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/google.png" alt="Free jump start service" style="margin-right: 5px; width: 35px; height: auto">
+                </a>
+                    <a href="https://www.yelp.com/biz/chicagocarhelp-cicero-3">
+                    <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/Yelp.png" alt="Free jump start service" style="margin-right: 5px; width: 35px; height: auto">
+                </a>
+
+                    <a href="https://www.linkedin.com/company/chicagocarhelp">
+                    <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/linkedin.png" alt="Free jump start service" style="margin-right: 5px; width: 35px; height: auto">
+                </a>
+
+                    <a href="http://chicagocarhelp.tumblr.com">
+                    <img src="https://chicagocarhelp.s3.us-east-2.amazonaws.com/tumblr.png" alt="Free jump start service" style="margin-right: 5px; width: 35px; height: auto">
+                </a>
+
+
+
+    </div>
+
+
+
+</div>
+
+
+
+    <div align="center">
+        <footer>
+            <small>Copyright&copy; 2019, Jump Start Service Chicago - Chicagocarhelp. All Rights Reserved</small>
+        </footer>
+    </div>
 {% endblock %}
