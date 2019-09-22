@@ -172,11 +172,11 @@
                     <form action="{% url 'help:thankyou'%}" method="post">
                         {% csrf_token %}
           <div class="form-row">
-            <div class="col-lg-6 col-12" style="margin-top: 5px">
+            <div class="col-lg-6 col-12" style="margin-top: 10px">
                         <input type="text" name="manual_address" class="form-control" value="" id="add_manual_address" placeholder="Enter your location" >
             <small id="emailHelp" class="form-text text-muted">Name of street or complete address</small>
             </div>
-            <div class="col-lg-6 col-12" style="margin-top: 5px">
+            <div class="col-lg-6 col-12" style="margin-top: 10px">
                         <input type="text" required name="phone" placeholder="Enter your phone number" id="phone" class="form-control">
             <small id="emailHelp2" class="form-text text-muted">Phone number to contact you</small>
             </div>
@@ -663,6 +663,10 @@
 
     <div align="center">
         <footer>
+
+                        <a href="{% url 'help:user_sitemap'%}">sitemap.html</a>
+<br>
+
             <small>Copyright&copy; 2019, Jump Start Service Chicago - Chicagocarhelp. All Rights Reserved</small>
         </footer>
     </div>
