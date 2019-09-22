@@ -11,6 +11,7 @@ urlpatterns = [
     path('Car-Unlock-Service-Chicago-IL/', views.car_unlock, name='unlock_car'),
     path('Jump-Start-Service-Illinois-Chicago/', views.battery_jump_start, name='jump_start'),
     path('Pasar-Cables-Chicago-IL/', views.jump_service_spanish, name='spanish'),
+    path('sitemap.html/', views.user_sitemap, name='user_sitemap'),
     path('thankyou/', views.request_services, name='thankyou'),
     path('sitemap.xml', views.site_map, name='sitemap'),
     path('robots.txt', TemplateView.as_view(template_name="helper/robots.txt", content_type="text/plain"),

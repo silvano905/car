@@ -134,6 +134,10 @@ def jump_service_spanish(request):
     return render(request, 'helper/spanish.html')
 
 
+def user_sitemap(request):
+    return render(request, 'helper/spanish.html')
+
+
 
 
 
