@@ -135,7 +135,12 @@ def jump_service_spanish(request):
 
 
 def user_sitemap(request):
-    return render(request, 'helper/sitemap.html')
+    return render(request, 'helper/sitemap.html')\
+
+
+
+def roadside_assistance(request):
+    return render(request, 'helper/roadside-assistance-chicago.html')
 
 
 
