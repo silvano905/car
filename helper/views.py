@@ -19,6 +19,7 @@ from django.db.models import F
 from datetime import datetime
 from django.views.decorators.cache import cache_page
 import time
+from django.utils import timezone
 import datetime
 nowtime = datetime.datetime.now()
 hourx = datetime.datetime.now().time().hour
@@ -71,7 +72,8 @@ def add_auto(request):
             'berenise': berenise,
             'closed': closed,
             'dayx': dayx,
-            'nowtime': nowtime
+            'nowtime': nowtime,
+            'timezone': timezone
         }
 
         ll = render(request, 'helper/home.html', context)
