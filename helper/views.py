@@ -19,11 +19,35 @@ from django.db.models import F
 from datetime import datetime
 from django.views.decorators.cache import cache_page
 import time
+import datetime
+nowtime = datetime.datetime.now()
+hourx = datetime.datetime.now().time().hour
+dayx = datetime.datetime.now().strftime("%A")
+
 
 
 def add_auto(request):
+    closed = 'no'
     berenise = False
-    vacations = 'open on Monday 5AM'
+    vacations = hourx
+    if dayx == 'Saturday' or dayx == 'Sunday':
+        closed = 'today we close at 6PM'
+        if hourx > 18:
+            closed = 'sorry we are closed (6PM)'
+        else:
+            remaining_time = 18 - hourx
+            closed = 'We close in {} Hour/s (6PM)'.format(remaining_time)
+    else:
+        if hourx > 12:
+            closed = 'sorry we are closed (12PM)'
+        else:
+            remaining_time = 12 - hourx
+            closed = 'We close in {} Hour/s (12PM)'.format(remaining_time)
+
+
+
+
+
 
     key = False
     gas = False
@@ -44,7 +68,10 @@ def add_auto(request):
         context = {
             'all': all_services,
             'vacations': vacations,
-            'berenise': berenise
+            'berenise': berenise,
+            'closed': closed,
+            'dayx': dayx,
+            'nowtime': nowtime
         }
 
         ll = render(request, 'helper/home.html', context)
