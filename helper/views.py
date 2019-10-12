@@ -30,20 +30,21 @@ dayx = datetime.datetime.now().strftime("%A")
 def add_auto(request):
     closed = 'no'
     berenise = False
-    vacations = hourx
+    vacations = 'hi'
     if dayx == 'Saturday' or dayx == 'Sunday':
-        closed = 'today we close at 6PM'
-        if hourx > 18:
-            closed = 'sorry we are closed (6PM)'
-        else:
-            remaining_time = 18 - hourx
-            closed = 'We close in {} Hour/s (6PM)'.format(remaining_time)
+        closed = 'Today we close at 6PM'
+        # if hourx > 18:
+        #     closed = 'sorry we are closed (6PM)'
+        # else:
+        #     remaining_time = 18 - hourx
+        #     closed = 'We close in {} Hour/s (6PM)'.format(remaining_time)
     else:
-        if hourx > 12:
-            closed = 'sorry we are closed (12PM)'
-        else:
-            remaining_time = 12 - hourx
-            closed = 'We close in {} Hour/s (12PM)'.format(remaining_time)
+        closed = 'Today we close at 12PM'
+        # if hourx > 12:
+        #     closed = 'sorry we are closed (12PM)'
+        # else:
+        #     remaining_time = 12 - hourx
+        #     closed = 'We close in {} Hour/s (12PM)'.format(remaining_time)
 
 
 
